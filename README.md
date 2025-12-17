@@ -14,7 +14,6 @@
 - **讨论区 / Discussions**：  
   [`g2rain/g2rain`](https://github.com/g2rain/g2rain/discussions)
 
-> 注：以上链接请根据实际情况替换为真实地址。
 
 ---
 
