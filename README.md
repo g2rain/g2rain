@@ -41,7 +41,6 @@ g2rain 组织下推荐的核心仓库：
 
 - [`docs/overview.md`](docs/overview.md)：平台整体概览
 - [`docs/architecture.md`](docs/architecture.md)：核心组件、交互流程、技术选型
-- [`docs/roadmap.md`](docs/roadmap.md)：功能与版本规划
 
 如果你只想快速上手前端部分，可以优先查看：
 
