@@ -1,109 +1,164 @@
-# g2rain 开源平台
+﻿<p align="center">
+  <img src="https://github.com/g2rain.png" alt="G2Rain" width="180" />
+</p>
 
-**g2rain** 是一个面向企业级场景的开源平台，围绕认证与授权、微前端框架、统一管理后台等能力，提供一整套从网关、SSO、到前端壳应用和子应用的解决方案。
+# g2rain
 
-本仓库是 **g2rain GitHub Organization 的入口项目**，用于集中说明平台愿景、整体架构、治理与贡献方式，并统一指向各个子项目。
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+[![Community](https://img.shields.io/badge/community-open-brightgreen.svg)](https://github.com/g2rain)
 
----
+下一代AI软件开发范式，AI原生Agent平台，开源的企业级SaaS底座。
 
-## 🌐 官方入口
+g2rain 开源组织与平台总入口，集中介绍平台愿景、整体架构、核心项目、社区治理与贡献协作方式
 
-- **官方网站**：`https://www.g2rain.com` 
-- **文档站点**：`https://docs.g2rain.com`
-- **GitHub 组织**：[`g2rain`](https://github.com/g2rain)  
-- **讨论区 / Discussions**：  
-  [`g2rain/g2rain`](https://github.com/g2rain/g2rain/discussions)
+[官网](https://www.g2rain.com) · [Issues](https://github.com/g2rain/g2rain/issues) · [Discussions](https://github.com/g2rain/g2rain/discussions)
 
+## 目录
 
----
+- 项目简介
+- 平台定位
+- 业务域说明
+- 功能概览
+- 使用场景
+- 核心流程
+- 流程图
+- 技术栈
+- 快速开始
+- 安全说明
+- 与关联仓库的关系
+- 模块说明
+- 职责边界
+- 常见问题
+- 关联仓库
+- 参与贡献
+- 许可证
+- 联系我们
+- 致谢
 
-## 🧩 生态总览
+## 项目简介
 
-g2rain 组织下推荐的核心仓库：
+g2rain 开源组织与平台总入口，集中介绍平台愿景、整体架构、核心项目、社区治理与贡献协作方式
 
-- **主应用 / 壳应用**
-  - `g2rain-main-shell`：管理后台主应用（微前端壳），负责菜单、Tab、子应用装载、SSO 等。
-- **子应用模板 & 脚手架**
-  - `g2rain-app-template`：基于 Vue 3 + Vite + qiankun 的子应用模板（支持 SSO / DPoP / Token 管理）。
-  - `g2rain-app-cli` (`create-g2rain-app`)：子应用脚手架，基于 `g2rain-app-template` 快速创建新项目。
-- **IAM / 网关 / 后端相关**（示例名称，按实际仓库调整）
-  - `g2rain-iam`：身份认证与授权服务（SSO、Token 签发与校验）。
-  - `g2rain-gateway`：API 网关与路由转发。
+## 平台定位
 
-完整列表请参见 [g2rain 组织主页](https://github.com/g2rain)。
+该仓库用于组装或运行 g2rain 平台环境。
 
----
+## 业务域说明
 
-## 🏗 架构与设计
+该仓库聚焦于 `组织入口、平台愿景、生态导航、社区治理与贡献协作`。
 
-更详细的架构说明请参考：
+## 功能概览
 
-- [`docs/overview.md`](docs/overview.md)：平台整体概览
-- [`docs/architecture.md`](docs/architecture.md)：核心组件、交互流程、技术选型
+| 能力 | 说明 |
+| --- | --- |
+| 平台愿景与定位 | 说明 g2rain 的开源目标、企业级 SaaS 定位与 AI 原生方向。 |
+| 生态仓库导航 | 集中连接平台基础服务、前端应用、脚手架、组件和部署项目。 |
+| 架构资料 | 通过 docs 中的架构图与说明展示平台组成和协作关系。 |
+| 社区治理 | 维护贡献方式、组织治理、社区规范与讨论入口。 |
 
-如果你只想快速上手前端部分，可以优先查看：
+## 使用场景
 
-- `g2rain-main-shell` 的 `README.md`
-- `g2rain-app-template` 的 `README.md`
-- `g2rain-app-cli` 的 `README.md`
+| 场景 | 说明 |
+| --- | --- |
+| 首次了解 g2rain | 从统一入口了解平台定位、架构与核心仓库。 |
+| 选择项目与能力 | 根据开发、部署或业务需求定位对应开源仓库。 |
+| 参与开源贡献 | 查阅社区治理、贡献流程和讨论渠道。 |
 
----
+## 核心流程
 
-## 👥 社区与治理
+| 流程 | 关键步骤 | 代码线索 |
+| --- | --- | --- |
+| 平台探索路径 | 阅读平台定位 → 查看整体架构 → 选择目标仓库 → 阅读项目 README → 通过 Issues 或 Discussions 参与社区 | README.md、docs、community、governance |
 
-g2rain 遵循开放、透明、可持续的治理原则。
+## 流程图
 
-- **治理模型**：见 [`governance/governance.md`](governance/governance.md)
-- **角色说明**：Maintainer / Committer / Contributor 角色与权限说明见  
-  [`governance/roles.md`](governance/roles.md)
-- **安全与披露流程**：见 [`governance/security.md`](governance/security.md)
+```mermaid
+flowchart LR
+  A[组织入口] --> B[平台定位与架构]
+  B --> C[选择核心仓库]
+  C --> D[使用或集成项目]
+  D --> E[Issues / Discussions / Contribution]
+```
 
-如果你希望更深度参与，可以：
+## 技术栈
 
-- 参与 GitHub Discussions 讨论新特性与路线图
-- 参与社区例会：会议纪要记录于 `community/meeting-notes/`
+| 类别 | 说明 |
+| --- | --- |
+| 文档 | Markdown |
+| 协作 | GitHub Issues、Discussions、Pull Requests |
 
----
+## 快速开始
 
-## 🤝 如何贡献
+| 步骤 | 命令或位置 | 说明 |
+| --- | --- | --- |
+| 浏览平台 | `https://www.g2rain.com` | 访问官方网站了解平台。 |
+| 查看项目 | `https://github.com/orgs/g2rain/repositories` | 浏览组织全部开源仓库。 |
 
-我们非常欢迎你参与 g2rain 的建设！
+## 安全说明
 
-1. 阅读 [`community/CONTRIBUTING.md`](community/CONTRIBUTING.md) 获取详细贡献指南：
-   - 如何提交 Issue / Bug 报告
-   - 如何提 Pull Request
-   - 代码风格与 Commit 规范（如使用 Conventional Commits）
-2. 阅读 [`community/CODE_OF_CONDUCT.md`](community/CODE_OF_CONDUCT.md) 了解社区行为准则。
-3. 在相关子项目中创建 Issue 或 PR，例如：
-   - UI / 前端功能问题：`g2rain-main-shell`、`g2rain-app-template`
-   - 脚手架与模板生成：`g2rain-app-cli`
-   - SSO / 网关能力：`g2rain-iam`、`g2rain-gateway`（示例）
+| 主题 | 说明 |
+| --- | --- |
+| 公开信息 | 组织入口只发布可公开的平台、治理和社区信息，不应包含内部凭据或未公开资料。 |
 
----
+## 与关联仓库的关系
 
-## 💬 讨论与支持
+本仓库连接 g2rain 组织下的后端基础服务、前端应用、开发工具、业务示例与部署仓库，为使用者和贡献者提供统一导航。
 
-- **GitHub Discussions**：建议用来讨论新特性、设计方案与问答
-- **Issues**：建议仅用于 Bug 报告与明确的功能需求
-- **邮件列表 / IM 群组**（如果有）：可在 [`community/`](community/) 目录中补充相关信息
+## 模块说明
 
-你可以在本仓库或任意子项目中发起 Discussions，我们会尽量统一在组织层面进行跟进。
+| 模块 | 职责说明 | 代码线索 |
+| --- | --- | --- |
+| docs | 维护平台架构图与说明资料。 | docs |
+| community | 维护社区协作与公共规范。 | community |
+| governance | 维护组织治理机制与角色说明。 | governance |
 
----
+## 职责边界
 
-## 📜 License
+该仓库主要负责：
+- 负责集中表达 g2rain 平台愿景、架构、生态仓库导航与社区治理信息
+- 负责提供组织级贡献、讨论、许可证与项目入口
 
-除非单个仓库另有声明，否则 g2rain 相关代码默认遵循以下开源协议：
+该仓库默认不负责：
+- 不承载具体业务服务、前端应用或部署脚本的运行实现
+- 不替代各子仓库维护其专属使用、配置和开发文档
 
-- **License**：参见本仓库的 [`LICENSE`](LICENSE) 文件  
+## 常见问题
 
----
+| 问题 | 可能原因 | 处理建议 |
+| --- | --- | --- |
+| 项目入口失效 | 仓库名称、默认分支或文档链接发生变化。 | 更新 README 中的生态导航并以 g2rain 组织仓库列表为准。 |
 
-## 🧭 下一步你可以做什么？
+## 关联仓库
 
-- 想要 **快速体验**：从 `g2rain-main-shell` 和 `g2rain-app-template` 开始。
-- 想要 **搭建自己的子应用**：使用 `g2rain-app-cli` 创建项目。
-- 想要 **了解整体方案**：阅读本仓库 `docs/` 中的架构与路线图文档。
-- 想要 **参与贡献**：从简单的 Issue、文档修正或示例补充开始。
+| 仓库 | 协作关系 |
+| --- | --- |
+| g2rain-iam | 协同完成登录认证、令牌发放、SSO 回调或前端登录态衔接。 |
+| g2rain-main-shell | 作为微前端主应用，负责装载子应用并提供统一平台入口。 |
 
-欢迎加入 g2rain 社区，一起打造更好用的企业级开源平台！
+## 参与贡献
+
+我们欢迎所有形式的贡献：Issue 反馈、文档改进、功能建议与代码提交。
+
+推荐流程：
+
+1. Fork 本仓库。
+2. 创建特性分支：`git checkout -b feature/your-feature-name`。
+3. 提交更改：`git commit -m "Add some feature"`。
+4. 推送分支：`git push origin feature/your-feature-name`。
+5. 提交 Pull Request。
+
+代码贡献前请尽量补充必要的测试和文档，并确保构建、测试与静态检查通过。
+
+## 许可证
+
+本项目基于 [Apache 2.0许可证](https://github.com/g2rain/g2rain-common/blob/main/LICENSE) 开源。
+
+## 联系我们
+
+- Issues: [GitHub Issues](https://github.com/g2rain/g2rain/issues)
+- 讨论: [GitHub Discussions](https://github.com/g2rain/g2rain/discussions)
+- 邮箱: g2rain_developer@163.com
+
+## 致谢
+
+感谢所有为 g2rain 项目提交 Issue、代码、文档、建议和使用反馈的开发者们！
