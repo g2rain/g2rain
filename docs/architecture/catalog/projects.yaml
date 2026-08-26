@@ -92,3 +92,18 @@ projects:
     testsRun: 47
     reviewedAt: "2026-08-26"
     note: IAM 是持续运行的统一认证、授权与 Token 服务，不是研发工具或普通领域服务；mvn test 通过，外部 IdP 与跨服务联调仍按发布流程执行
+
+  - repository: g2rain/g2rain-crafter
+    profile: null
+    architectureType: backend-scaffolding-maven-plugin
+    adoptionStatus: supporting-tool
+    platformRole: official-backend-project-and-code-generator
+    implementationPolicy: organization-singleton
+    centralDocument: docs/architecture/platform-tools/g2rain-crafter.md
+    relatedProfile: java-domain-service
+    currentVersion: 1.0.7
+    generatorDependency: com.g2rain:g2rain-generator-maven-plugin:1.0.6
+    documentationStatus: central-documented
+    validationStatus: source-reviewed
+    reviewedAt: "2026-08-26"
+    note: Maven 插件自身不采用领域服务 Profile；它负责生成并维护符合目标 Profile 的后端项目和业务代码

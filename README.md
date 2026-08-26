@@ -142,6 +142,8 @@ g2rain 使用“组织级 Profile + 项目基线声明 + 显式例外”的方�
 
 组织级唯一实现分别按职责登记：`g2rain-app-cli` 是研发期平台工具；[`g2rain-iam`](docs/architecture/platform-services/g2rain-iam.md) 是持续运行的平台唯一安全服务，维护认证、授权、Token、IdP 及跨仓库安全契约。
 
+[`g2rain-crafter`](docs/architecture/platform-tools/g2rain-crafter.md) 是官方后端项目与代码生成 Maven 插件，通过统一 `bootstrap` Goal 创建 API/Biz/Startup 骨架并复用底层 Generator 生成业务代码。
+
 ## 常见问题
 
 | 问题 | 可能原因 | 处理建议 |
