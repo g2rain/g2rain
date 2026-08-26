@@ -14,6 +14,6 @@
 | 工具 | 状态 | 作用 | 相关 Profile |
 | --- | --- | --- | --- |
 | [g2rain-app-cli](g2rain-app-cli.md) | 官方唯一前端项目脚手架，正式兼容组合待发布 | 从官方模板创建符合前端架构基线的 App | `frontend-app 1.0.0` |
-| [g2rain-crafter](g2rain-crafter.md) | 官方唯一后端项目与代码生成 Maven 插件 | 生成 API/Biz/Startup 骨架并持续生成数据库业务代码 | `java-domain-service 1.0.0` |
+| [g2rain-crafter](g2rain-crafter.md) | 官方唯一后端项目与代码生成 Maven 插件；12 个测试通过 | 生成 API/Biz/Startup 骨架并持续生成数据库业务代码 | `java-domain-service 1.0.0` |
 
 工具的命令、源码设计、测试和发布细节由工具仓库维护；中央仓库只维护平台定位和跨仓库规则。

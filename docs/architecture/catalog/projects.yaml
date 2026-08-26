@@ -104,6 +104,7 @@ projects:
     currentVersion: 1.0.7
     generatorDependency: com.g2rain:g2rain-generator-maven-plugin:1.0.6
     documentationStatus: central-documented
-    validationStatus: source-reviewed
-    reviewedAt: "2026-08-26"
-    note: Maven 插件自身不采用领域服务 Profile；它负责生成并维护符合目标 Profile 的后端项目和业务代码
+    validationStatus: test-passed
+    testsRun: 12
+    reviewedAt: "2026-08-27"
+    note: Maven 插件自身不采用领域服务 Profile；mvn test 通过，真实数据库 foundry 与生成项目构建仍待发布验证
