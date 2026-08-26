@@ -13,6 +13,8 @@
 - [Java 领域服务 Profile](architecture/profiles/java-domain-service/README.md)
 - [前端 App Profile](architecture/profiles/frontend-app/README.md)
 - [前端 Shell Profile](architecture/profiles/frontend-shell/README.md)
+- [平台唯一服务目录](architecture/platform-services/README.md)
+- [g2rain-iam 平台服务登记](architecture/platform-services/g2rain-iam.md)
 - [平台工具目录](architecture/platform-tools/README.md)
 - [g2rain-app-cli 平台登记](architecture/platform-tools/g2rain-app-cli.md)
 - [组织级架构决策](architecture/decisions/README.md)
