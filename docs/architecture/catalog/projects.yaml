@@ -76,3 +76,18 @@ projects:
     validatedAt: "2026-08-26"
     deviationsFile: docs/architecture/deviations.md
     note: 当前唯一 Shell 实现，已完成项目文档、元数据、链接和生产构建验证并正式采用；项目安全偏差继续独立治理
+
+  - repository: g2rain/g2rain-iam
+    profile: null
+    architectureType: identity-security-service
+    adoptionStatus: platform-singleton
+    platformRole: central-identity-and-access-service
+    implementationPolicy: organization-singleton
+    centralDocument: docs/architecture/platform-services/g2rain-iam.md
+    relatedProfiles:
+      - frontend-app
+      - frontend-shell
+    documentationStatus: documented
+    validationStatus: source-reviewed
+    reviewedAt: "2026-08-26"
+    note: IAM 是持续运行的统一认证、授权与 Token 服务，不是研发工具或普通领域服务；本轮未执行 Maven 构建和外部 IdP 联调

@@ -16,7 +16,7 @@ Agent 根据 Profile、项目文档和 Git Diff 审核
 
 架构一致不代表所有项目完全相同。Profile 管理同类项目必须遵守的公共边界，项目只维护领域职责和经过说明的差异。
 
-唯一但会影响多个项目的平台级工具不强行抽象为 Profile，而是在 `platform-tools` 中登记其组织身份、跨仓库契约和版本关系。
+唯一但会影响多个项目的平台级工具不强行抽象为 Profile，而是在 `platform-tools` 中登记其研发契约。持续运行并提供组织级运行或安全契约的唯一服务登记在 `platform-services`；两者都不因只有一个实现而创建空泛 Profile。
 
 ## 当前 Profile
 
@@ -35,6 +35,14 @@ Agent 根据 Profile、项目文档和 Git Diff 审核
 | 工具 | 状态 | 中央职责 |
 | --- | --- | --- |
 | [g2rain-app-cli](platform-tools/g2rain-app-cli.md) | 官方唯一前端项目脚手架，正式兼容组合待发布 | 维护其平台定位以及 CLI、模板、生成 App 与 `frontend-app` Profile 的关系 |
+
+## 平台唯一服务
+
+| 服务 | 状态 | 中央职责 |
+| --- | --- | --- |
+| [g2rain-iam](platform-services/g2rain-iam.md) | Platform Singleton；源码已核对 | 维护统一认证、授权、Token、IdP 以及 Main Shell、Gateway、Basis 之间的安全契约 |
+
+IAM 持续运行并对外提供安全协议，因此不归入 `platform-tools`。当前只有一个实现，先按平台唯一服务治理；出现可替代实现或多仓库复用结构后再评估 `identity-security-service` Profile。
 
 ## 版本策略
 
@@ -58,6 +66,7 @@ Profile 版本与中央仓库快照 Tag 是两个维度：Profile 独立演进�
 - `catalog`：项目、Profile、版本和接入状态。
 - `migrations`：基线升级和批量迁移流程。
 - `platform-tools`：唯一或共享平台工具的定位、跨仓库契约和兼容关系。
+- `platform-services`：持续运行的平台唯一服务、跨仓库运行契约和安全边界。
 
 ## 项目接入
 

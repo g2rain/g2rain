@@ -140,6 +140,8 @@ g2rain 使用“组织级 Profile + 项目基线声明 + 显式例外”的方�
 
 当前包含三个正式组织级 Profile：[Java 领域服务](docs/architecture/profiles/java-domain-service/README.md) `1.0.0` 已由 `g2rain-member` 采用；[前端 App](docs/architecture/profiles/frontend-app/README.md) `1.0.0` 已完成模板和真实业务 App 的首轮验证；[前端 Shell](docs/architecture/profiles/frontend-shell/README.md) `1.0.0` 已由唯一主应用 `g2rain-main-shell` 验证并采用。`g2rain-app-cli` 提供符合前端 App Profile 的项目创建入口。
 
+组织级唯一实现分别按职责登记：`g2rain-app-cli` 是研发期平台工具；[`g2rain-iam`](docs/architecture/platform-services/g2rain-iam.md) 是持续运行的平台唯一安全服务，维护认证、授权、Token、IdP 及跨仓库安全契约。
+
 ## 常见问题
 
 | 问题 | 可能原因 | 处理建议 |
