@@ -1,0 +1,51 @@
+schemaVersion: 1
+id: frontend-shell
+name: 前端主应用 Shell
+version: 1.0.0
+status: stable
+baseProfile:
+  id: frontend-app
+  version: 1.0.0
+baselineRef: architecture-v1.2.0
+releasedAt: "2026-08-26"
+owners:
+  - g2rain architecture maintainers
+applicableTo:
+  - Vue 3 微前端主应用
+  - qiankun 子应用编排 Shell
+excludes:
+  - 普通业务子应用
+  - Node CLI
+  - 后端服务
+shellResponsibilities:
+  - global-layout-and-navigation
+  - application-registration
+  - micro-app-lifecycle
+  - cross-application-routing
+  - trusted-runtime-context
+  - authentication-session-coordination
+requiredApplicationContract:
+  - appKey
+  - name
+  - entry
+  - activeRule
+requiredDocuments:
+  - AGENTS.md
+  - docs/project.yaml
+  - docs/architecture/overview.md
+  - docs/architecture/layers.md
+  - docs/architecture/dependencies.md
+  - docs/architecture/runtime-flows.md
+  - docs/architecture/deviations.md
+  - docs/development/testing.md
+  - docs/development/definition-of-done.md
+  - docs/operations/configuration.md
+  - docs/operations/deployment.md
+  - docs/security/security-boundaries.md
+  - docs/requirements/README.md
+validation:
+  buildCommand: npm run build
+  releaseEvidence: production-build
+  protocolChangeBrowserIntegrationRequired: true
+validatedImplementations:
+  - g2rain/g2rain-main-shell

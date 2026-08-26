@@ -1,0 +1,72 @@
+schemaVersion: 1
+id: frontend-app
+name: 前端 App
+version: 1.0.0
+status: stable
+baselineRef: architecture-v1.1.0
+releasedAt: "2026-08-25"
+owners:
+  - g2rain architecture maintainers
+
+applicableTo:
+  - Vue 3 业务前端应用
+  - qiankun 微前端子应用
+  - 用于生成上述应用的官方模板
+
+layers:
+  order:
+    - shared
+    - components
+    - platform
+    - runtime
+    - views
+  dependencyDirection: views -> runtime -> platform -> components -> shared
+  compositionRoots:
+    - src/main.ts
+    - src/App.vue
+
+runtime:
+  modes:
+    - integrated
+    - alone
+  integratedEntry: main-shell
+  authentication: IAM
+  businessEntry: Gateway
+
+generation:
+  codeGenerationReviewRequired: true
+  resourceGenerationReviewRequired: true
+  generatedCodeIsArchitectureTruth: false
+
+scaffolding:
+  creator: g2rain/g2rain-app-cli
+  template: g2rain/g2rain-app-template
+  outputProfile: frontend-app
+  outputProfileVersion: 1.0.0
+  policy: scaffolding-policy.md
+  templateRefMustBeTraceable: true
+  existingTargetOverwriteAllowed: false
+
+requiredDocuments:
+  - AGENTS.md
+  - docs/project.yaml
+  - docs/architecture/overview.md
+  - docs/architecture/layers.md
+  - docs/architecture/dependencies.md
+  - docs/architecture/deviations.md
+  - docs/development/code-conventions.md
+  - docs/development/testing.md
+  - docs/development/definition-of-done.md
+  - docs/requirements/README.md
+
+validation:
+  agentReviewRequired: true
+  repositorySpecificAgentScriptRequired: false
+  buildCommand: npm run build
+
+validatedImplementations:
+  - g2rain/g2rain-app-template
+  - g2rain/g2rain-manager-app
+plannedAdoptions:
+  - g2rain/g2rain-app-template
+  - g2rain/g2rain-manager-app
