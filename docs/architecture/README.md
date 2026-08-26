@@ -35,6 +35,7 @@ Agent 根据 Profile、项目文档和 Git Diff 审核
 | 工具 | 状态 | 中央职责 |
 | --- | --- | --- |
 | [g2rain-app-cli](platform-tools/g2rain-app-cli.md) | 官方唯一前端项目脚手架，正式兼容组合待发布 | 维护其平台定位以及 CLI、模板、生成 App 与 `frontend-app` Profile 的关系 |
+| [g2rain-crafter](platform-tools/g2rain-crafter.md) | 官方唯一后端项目与代码生成 Maven 插件 | 维护 Crafter、底层 Generator、模板、生成服务与 `java-domain-service` 的关系 |
 
 ## 平台唯一服务
 
