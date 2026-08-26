@@ -16,4 +16,4 @@
 
 | 服务 | 状态 | 中央身份 | 主要协作者 |
 | --- | --- | --- | --- |
-| [g2rain-iam](g2rain-iam.md) | Platform Singleton，源码已核对 | 统一身份入口、授权与 Token 中心 | Main Shell、Gateway、Basis、各业务服务 |
+| [g2rain-iam](g2rain-iam.md) | Platform Singleton，47 个 Maven 测试通过 | 统一身份入口、授权与 Token 中心 | Main Shell、Gateway、Basis、各业务服务 |

@@ -40,7 +40,7 @@ Agent 根据 Profile、项目文档和 Git Diff 审核
 
 | 服务 | 状态 | 中央职责 |
 | --- | --- | --- |
-| [g2rain-iam](platform-services/g2rain-iam.md) | Platform Singleton；源码已核对 | 维护统一认证、授权、Token、IdP 以及 Main Shell、Gateway、Basis 之间的安全契约 |
+| [g2rain-iam](platform-services/g2rain-iam.md) | Platform Singleton；47 个 Maven 测试通过 | 维护统一认证、授权、Token、IdP 以及 Main Shell、Gateway、Basis 之间的安全契约 |
 
 IAM 持续运行并对外提供安全协议，因此不归入 `platform-tools`。当前只有一个实现，先按平台唯一服务治理；出现可替代实现或多仓库复用结构后再评估 `identity-security-service` Profile。
 

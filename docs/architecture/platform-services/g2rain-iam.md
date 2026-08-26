@@ -8,7 +8,7 @@
 | 架构类型 | `identity-security-service` |
 | 平台身份 | g2rain 统一身份入口、授权服务与 Token 中心 |
 | 实现策略 | `organization-singleton` |
-| 当前状态 | Platform Singleton；源码与项目描述已核对 |
+| 当前状态 | Platform Singleton；源码、项目文档和 Maven 测试已核对 |
 | 当前项目版本 | `1.0.0` |
 | 运行形态 | Java 25、Spring Boot 4、独立可执行服务 |
 | 关联 Profile | [`frontend-shell 1.0.0`](../profiles/frontend-shell/README.md)、[`frontend-app 1.0.0`](../profiles/frontend-app/README.md) |
@@ -90,7 +90,8 @@ flowchart LR
 - 已确认项目为 Spring Boot 可执行服务，当前版本 `1.0.0`；
 - 已确认存在授权、Token、会话、DPoP、钉钉、企业微信、Redis、Nacos 和 Basis 协作实现；
 - 已依据源码、POM、运行配置和 README 完成中央身份登记；
-- 本次登记未执行 Maven 构建、测试或外部 IdP 联调，因此目录状态为 `source-reviewed`，不能写成 `build-passed`；
+- `2026-08-26` 执行 `mvn test`：47 个测试全部通过，Maven Enforcer 检查通过；JaCoCo 因缺少执行数据跳过报告；
+- 外部 IdP、Main Shell、Gateway 与 Basis 联调尚未在本轮执行，因此状态为 `test-passed`，不能写成端到端验证通过；
 - IAM 仓库当前未跟踪的 `docs/design/wecom-customer-service-callback-verification.md` 属于项目进行中的设计资料，本次中央登记未修改它。
 
 ## 唯一性说明

@@ -88,6 +88,7 @@ projects:
       - frontend-app
       - frontend-shell
     documentationStatus: documented
-    validationStatus: source-reviewed
+    validationStatus: test-passed
+    testsRun: 47
     reviewedAt: "2026-08-26"
-    note: IAM 是持续运行的统一认证、授权与 Token 服务，不是研发工具或普通领域服务；本轮未执行 Maven 构建和外部 IdP 联调
+    note: IAM 是持续运行的统一认证、授权与 Token 服务，不是研发工具或普通领域服务；mvn test 通过，外部 IdP 与跨服务联调仍按发布流程执行
