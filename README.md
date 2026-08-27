@@ -144,6 +144,8 @@ g2rain 使用“组织级 Profile + 项目基线声明 + 显式例外”的方�
 
 [`g2rain-crafter`](docs/architecture/platform-tools/g2rain-crafter.md) 是官方后端项目与代码生成 Maven 插件，通过统一 `bootstrap` Goal 创建 API/Biz/Startup 骨架并复用底层 Generator 生成业务代码。
 
+[`g2rain-generator-maven-plugin`](docs/architecture/platform-tools/g2rain-generator-maven-plugin.md) 是 Crafter foundry 阶段使用的官方后端数据库代码生成引擎，也可通过独立 `generate` Goal 使用。
+
 ## 常见问题
 
 | 问题 | 可能原因 | 处理建议 |

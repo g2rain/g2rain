@@ -108,3 +108,18 @@ projects:
     testsRun: 12
     reviewedAt: "2026-08-27"
     note: Maven 插件自身不采用领域服务 Profile；mvn test 通过，真实数据库 foundry 与生成项目构建仍待发布验证
+
+  - repository: g2rain/g2rain-generator-maven-plugin
+    profile: null
+    architectureType: backend-code-generation-maven-plugin
+    adoptionStatus: supporting-tool
+    platformRole: official-backend-code-generation-engine
+    implementationPolicy: organization-singleton
+    centralDocument: docs/architecture/platform-tools/g2rain-generator-maven-plugin.md
+    relatedProfile: java-domain-service
+    upstreamTool: g2rain/g2rain-crafter
+    currentVersion: 1.0.6
+    documentationStatus: central-documented
+    validationStatus: source-reviewed
+    reviewedAt: "2026-08-27"
+    note: Generator 是 Crafter foundry 的底层生成引擎，也可独立执行 generate Goal；真实数据库生成与生成项目构建待验证
