@@ -43,7 +43,7 @@ Crafter 和 Generator 均可发布独立版本。Crafter 必须固定 Generator 
 
 | Crafter | Generator | 目标 Profile | 状态 |
 | --- | --- | --- | --- |
-| `1.0.7` | `1.0.6` | `java-domain-service 1.0.0` | Crafter 单元测试通过；Generator 本轮验证待更新 |
+| `1.0.7` | `1.0.6` | `java-domain-service 1.0.0` | Crafter 12 个、Generator 31 个测试通过；真实数据库与生成项目构建待验证 |
 
 ## 最低验收
 
@@ -61,3 +61,7 @@ Crafter 和 Generator 均可发布独立版本。Crafter 必须固定 Generator 
 - Generator、Crafter、模板和 Profile 的兼容组合应机器可读并写入生成结果。
 
 当前只有一个官方后端代码生成引擎，因此按平台唯一工具治理，不创建独立 Profile。
+
+## 当前验证状态
+
+`2026-08-27` 执行 `mvn test`，31 个测试全部通过，覆盖配置优先级、隔离规则、列模型、校验和模板渲染。真实数据库生成测试当前被注释，本轮也未构建完整生成项目，因此状态为 `test-passed`，不等于端到端生成通过。
