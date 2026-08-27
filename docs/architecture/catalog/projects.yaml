@@ -120,6 +120,7 @@ projects:
     upstreamTool: g2rain/g2rain-crafter
     currentVersion: 1.0.6
     documentationStatus: central-documented
-    validationStatus: source-reviewed
+    validationStatus: test-passed
+    testsRun: 31
     reviewedAt: "2026-08-27"
-    note: Generator 是 Crafter foundry 的底层生成引擎，也可独立执行 generate Goal；真实数据库生成与生成项目构建待验证
+    note: Generator 是 Crafter foundry 的底层生成引擎，也可独立执行 generate Goal；mvn test 通过，真实数据库生成与生成项目构建待验证
