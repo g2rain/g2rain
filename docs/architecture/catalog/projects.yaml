@@ -1,0 +1,126 @@
+schemaVersion: 2
+
+profiles:
+  - id: java-domain-service
+    version: 1.0.0
+    status: stable
+    baselineRef: architecture-v1.0.0
+    releasedAt: "2026-08-24"
+  - id: frontend-app
+    version: 1.0.0
+    status: stable
+    baselineRef: architecture-v1.1.0
+    releasedAt: "2026-08-25"
+  - id: frontend-shell
+    version: 1.0.0
+    status: stable
+    baselineRef: architecture-v1.2.0
+    releasedAt: "2026-08-26"
+    baseProfile: frontend-app
+    baseProfileVersion: 1.0.0
+
+projects:
+  - repository: g2rain/g2rain-member
+    profile: java-domain-service
+    baselineVersion: 1.0.0
+    adoptionStatus: adopted
+    baselineRef: architecture-v1.0.0
+    deviationsFile: docs/architecture/deviations.md
+
+  - repository: g2rain/g2rain-department
+    profile: java-domain-service
+    baselineVersion: null
+    adoptionStatus: planned
+    note: 接入前需根据当前源码和 POM 完成差异审核
+
+  - repository: g2rain/g2rain-app-template
+    profile: frontend-app
+    baselineVersion: 1.0.0-draft
+    adoptionStatus: upgrade-required
+    baselineRef: feature/g2rain-architectur-init
+    targetBaselineVersion: 1.0.0
+    targetBaselineRef: architecture-v1.1.0
+    validationStatus: build-passed
+    validatedAt: "2026-08-25"
+    deviationsFile: docs/architecture/deviations.md
+
+  - repository: g2rain/g2rain-app-cli
+    profile: null
+    architectureType: frontend-tooling-cli
+    adoptionStatus: supporting-tool
+    platformRole: official-frontend-scaffolder
+    implementationPolicy: organization-singleton
+    centralDocument: docs/architecture/platform-tools/g2rain-app-cli.md
+    relatedProfile: frontend-app
+    documentationStatus: documented
+    note: CLI 自身不是浏览器 App；它按 frontend-app scaffolding policy 从模板创建采用该 Profile 的项目
+
+  - repository: g2rain/g2rain-manager-app
+    profile: frontend-app
+    baselineVersion: 1.0.0
+    adoptionStatus: adopted
+    baselineRef: architecture-v1.1.0
+    validationStatus: build-passed
+    validatedAt: "2026-08-26"
+    deviationsFile: docs/architecture/deviations.md
+    note: 项目已建立 AGENTS.md、docs/project.yaml 和专题文档；浏览器、main-shell、IAM 与 Gateway 集成仍按项目发布流程验证
+
+  - repository: g2rain/g2rain-main-shell
+    profile: frontend-shell
+    baseProfile: frontend-app
+    baseProfileVersion: 1.0.0
+    baselineVersion: 1.0.0
+    adoptionStatus: adopted
+    baselineRef: architecture-v1.2.0
+    validationStatus: build-passed
+    validatedAt: "2026-08-26"
+    deviationsFile: docs/architecture/deviations.md
+    note: 当前唯一 Shell 实现，已完成项目文档、元数据、链接和生产构建验证并正式采用；项目安全偏差继续独立治理
+
+  - repository: g2rain/g2rain-iam
+    profile: null
+    architectureType: identity-security-service
+    adoptionStatus: platform-singleton
+    platformRole: central-identity-and-access-service
+    implementationPolicy: organization-singleton
+    centralDocument: docs/architecture/platform-services/g2rain-iam.md
+    relatedProfiles:
+      - frontend-app
+      - frontend-shell
+    documentationStatus: documented
+    validationStatus: test-passed
+    testsRun: 47
+    reviewedAt: "2026-08-26"
+    note: IAM 是持续运行的统一认证、授权与 Token 服务，不是研发工具或普通领域服务；mvn test 通过，外部 IdP 与跨服务联调仍按发布流程执行
+
+  - repository: g2rain/g2rain-crafter
+    profile: null
+    architectureType: backend-scaffolding-maven-plugin
+    adoptionStatus: supporting-tool
+    platformRole: official-backend-project-and-code-generator
+    implementationPolicy: organization-singleton
+    centralDocument: docs/architecture/platform-tools/g2rain-crafter.md
+    relatedProfile: java-domain-service
+    currentVersion: 1.0.7
+    generatorDependency: com.g2rain:g2rain-generator-maven-plugin:1.0.6
+    documentationStatus: central-documented
+    validationStatus: test-passed
+    testsRun: 12
+    reviewedAt: "2026-08-27"
+    note: Maven 插件自身不采用领域服务 Profile；mvn test 通过，真实数据库 foundry 与生成项目构建仍待发布验证
+
+  - repository: g2rain/g2rain-generator-maven-plugin
+    profile: null
+    architectureType: backend-code-generation-maven-plugin
+    adoptionStatus: supporting-tool
+    platformRole: official-backend-code-generation-engine
+    implementationPolicy: organization-singleton
+    centralDocument: docs/architecture/platform-tools/g2rain-generator-maven-plugin.md
+    relatedProfile: java-domain-service
+    upstreamTool: g2rain/g2rain-crafter
+    currentVersion: 1.0.6
+    documentationStatus: central-documented
+    validationStatus: test-passed
+    testsRun: 31
+    reviewedAt: "2026-08-27"
+    note: Generator 是 Crafter foundry 的底层生成引擎，也可独立执行 generate Goal；mvn test 通过，真实数据库生成与生成项目构建待验证

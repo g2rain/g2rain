@@ -1,0 +1,48 @@
+schemaVersion: 1
+id: java-domain-service
+name: Java 领域服务
+version: 1.0.0
+status: stable
+releaseRef: architecture-v1.0.0
+releasedAt: "2026-08-24"
+owners:
+  - g2rain architecture maintainers
+
+requiredModules:
+  - suffix: -api
+    role: 可复用查询与受信业务契约
+  - suffix: -biz
+    role: 领域实现、接口适配与持久化
+  - suffix: -startup
+    role: Spring Boot 运行时组装
+
+dependencyDirection: startup -> biz -> api
+
+collaboration:
+  synchronousDefault: query-only
+  writePaths:
+    - App 携带 Token 经 Gateway 调用领域服务写用例
+    - 领域服务监听其他模块发布的领域事实并自主更新
+  synchronousWrite: architecture-exception
+
+database:
+  engine: MySQL
+  minimumVersion: "8.0.13"
+  activeRowUniqueExpression: IF(delete_flag = 0, 0, NULL)
+
+requiredDocuments:
+  - AGENTS.md
+  - docs/project.yaml
+  - docs/architecture/overview.md
+  - docs/architecture/modules.md
+  - docs/architecture/dependencies.md
+  - docs/architecture/deviations.md
+  - docs/development/code-conventions.md
+  - docs/development/testing.md
+  - docs/development/definition-of-done.md
+  - docs/requirements/README.md
+
+validation:
+  agentReviewRequired: true
+  repositorySpecificAgentScriptRequired: false
+  buildCommand: mvn clean verify
