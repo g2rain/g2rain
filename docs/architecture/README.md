@@ -22,11 +22,12 @@ Agent 根据 Profile、项目文档和 Git Diff 审核
 
 | Profile | 状态 | 适用项目 |
 | --- | --- | --- |
-| [java-domain-service](profiles/java-domain-service/README.md) | `1.0.0`（正式） | `g2rain-member` 已接入，`g2rain-department` 计划接入 |
+| [java-domain-service](profiles/java-domain-service/README.md) | `1.0.0`（正式） | `g2rain-member` 已接入，`g2rain-department`、`g2rain-basis` 与 `g2rain-infra` 计划接入 |
 | [frontend-app](profiles/frontend-app/README.md) | `1.0.0`（正式） | 模板与 Manager App 已完成首轮验证，项目按迁移流程显式接入 |
 | [frontend-shell](profiles/frontend-shell/README.md) | `1.0.0`（正式） | `g2rain-main-shell` 已采用；继承 frontend-app 通用规则并增加主应用契约 |
+| [gateway-service](profiles/gateway-service/README.md) | `1.0.0-draft`（试点） | WebFlux 为首个试点，后续由 WebMVC 验证共享契约与实现差异 |
 
-后续可增加 `java-platform-service`、`java-library`、`spring-boot-starter` 和 `security-service`，不能把领域服务或前端规则强加给不适用的仓库。
+后续可增加 `java-platform-service`、`java-library`、`spring-boot-starter` 和 `security-service`，不能把领域服务、Gateway 或前端规则强加给不适用的仓库。
 
 主应用不作为普通 `frontend-app` 强行接入。`frontend-shell` 通过显式基础 Profile 复用通用前端规则，并独立治理微应用生命周期、全局导航、跨应用上下文及 Shell 安全边界。
 
@@ -58,6 +59,8 @@ IAM 持续运行并对外提供安全协议，因此不归入 `platform-tools`�
 `frontend-app 1.0.0` 于 `2026-08-25` 转为正式版本，目标固定引用为 `architecture-v1.1.0`。模板和真实业务 App 的生产构建已经通过；各项目及脚手架兼容组合仍按迁移与发布流程显式升级，不能因 Profile 正式发布而自动改写项目声明。
 
 `frontend-shell 1.0.0` 于 `2026-08-26` 转为正式版本，固定引用为 `architecture-v1.2.0`。当前只有 `g2rain-main-shell` 一个实现，因此以其项目文档、元数据、链接检查和生产构建作为首发验证依据；后续跨应用协议变更仍须补充真实子应用浏览器联调。
+
+`gateway-service 1.0.0-draft` 以 `g2rain-gateway-webflux` 为首个试点，后续由 `g2rain-gateway-webmvc` 验证共享入口契约。当前固定到 `feature/g2rain-architectur-init`，目标正式快照为 `architecture-v1.3.0`。WebFlux 的 121 项 Maven 测试已通过；开发默认凭据、敏感请求日志、覆盖率采集、关键安全负向测试、真实基础设施联调及 WebMVC 差异审核仍是转正式阻断项。
 
 Profile 版本与中央仓库快照 Tag 是两个维度：Profile 独立演进语义版本，`architecture-v*` Tag 固定一次中央仓库完整快照。Draft 可以引用明确试点分支；正式采用时必须切换到包含该 Profile 的新固定 Tag，不能复用不含它的旧 Tag。
 
