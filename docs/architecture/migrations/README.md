@@ -33,3 +33,17 @@
 4. 执行 `npm run build`，记录警告和未验证的浏览器、主壳、IAM、Gateway 集成风险。
 5. 将项目 `docs/project.yaml` 的 Profile 版本更新为 `1.0.0`，`ref` 固定为 `architecture-v1.1.0`，并同步 `AGENTS.md`、README 和架构偏差。
 6. 完成项目 Review 与测试环境验证后，再把中央项目目录状态更新为 `adopted`。
+
+## gateway-service 1.0.0-draft
+
+Draft 试点固定到 `feature/g2rain-architectur-init`，目标正式快照为 `architecture-v1.3.0`。转正式前：
+
+1. 审核过滤器顺序、白名单、API Key/JWT/DPoP 分流、API 权限、签名和可信主体透传。
+2. 确认路由与权限事实来源、启动全量加载、增量同步、幂等、并发和失败恢复语义。
+3. 移除版本化开发凭据默认值，完成请求/响应日志脱敏与自动化测试。
+4. 运行 `mvn test`、适用静态检查并生成有效覆盖率报告。
+5. 联调 Nacos、Basis、Infra、同步消息、IAM 契约和至少一个真实下游服务。
+6. 验证 Jar/镜像、端口、健康检查、可观测性和回滚。
+7. 中央变更合并并发布 `architecture-v1.3.0` 后，将 Profile 改为 `1.0.0` stable，再由项目显式升级为 adopted。
+
+WebFlux 与 WebMVC 项目共享路由、安全、权限、主体和运维契约，但分别登记请求执行模型、过滤器机制和容器实现差异。正式发布前至少完成一个实现的全面验证，并完成另一个实现的差异审核。

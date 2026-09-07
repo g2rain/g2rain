@@ -18,6 +18,13 @@ profiles:
     releasedAt: "2026-08-26"
     baseProfile: frontend-app
     baseProfileVersion: 1.0.0
+  - id: gateway-service
+    version: 1.0.0-draft
+    status: draft
+    baselineRef: feature/g2rain-architectur-init
+    targetBaselineRef: architecture-v1.3.0
+    pilotImplementation: g2rain/g2rain-gateway-webflux
+    plannedImplementation: g2rain/g2rain-gateway-webmvc
 
 projects:
   - repository: g2rain/g2rain-member
@@ -32,6 +39,30 @@ projects:
     baselineVersion: null
     adoptionStatus: planned
     note: 接入前需根据当前源码和 POM 完成差异审核
+
+  - repository: g2rain/g2rain-basis
+    profile: java-domain-service
+    baselineVersion: null
+    adoptionStatus: planned
+    targetBaselineVersion: 1.0.0
+    targetBaselineRef: architecture-v1.0.0
+    validationStatus: test-passed
+    testsRun: 64
+    reviewedAt: "2026-09-03"
+    deviationsFile: docs/architecture/deviations.md
+    note: 已完成项目文档、元数据、链接和 Maven 验证；同步写契约、跨服务一致性、逻辑删除唯一键、开发凭证与集成测试差异关闭后再转为 adopted
+
+  - repository: g2rain/g2rain-infra
+    profile: java-domain-service
+    baselineVersion: null
+    adoptionStatus: planned
+    targetBaselineVersion: 1.0.0
+    targetBaselineRef: architecture-v1.0.0
+    validationStatus: build-passed
+    testsRun: 0
+    reviewedAt: "2026-09-04"
+    deviationsFile: docs/architecture/deviations.md
+    note: 已完成 README、项目文档、元数据、链接和 Maven 构建；测试、字典唯一键、数据库与事件一致性、开发凭据、写接口授权及 codegen 残留差异关闭后再转为 adopted
 
   - repository: g2rain/g2rain-app-template
     profile: frontend-app
@@ -92,6 +123,29 @@ projects:
     testsRun: 47
     reviewedAt: "2026-08-26"
     note: IAM 是持续运行的统一认证、授权与 Token 服务，不是研发工具或普通领域服务；mvn test 通过，外部 IdP 与跨服务联调仍按发布流程执行
+
+  - repository: g2rain/g2rain-gateway-webflux
+    profile: gateway-service
+    implementationType: webflux
+    baselineVersion: 1.0.0-draft
+    adoptionStatus: pilot
+    baselineRef: feature/g2rain-architectur-init
+    targetBaselineVersion: 1.0.0
+    targetBaselineRef: architecture-v1.3.0
+    validationStatus: test-passed
+    testsRun: 121
+    reviewedAt: "2026-09-06"
+    deviationsFile: docs/architecture/deviations.md
+    note: Gateway Service 首个 WebFlux 试点；项目文档、元数据和 Maven 测试已通过，开发默认凭据、敏感请求日志、JaCoCo、关键安全负向测试及真实集成完成后再转为 adopted
+
+  - repository: g2rain/g2rain-gateway-webmvc
+    profile: gateway-service
+    implementationType: webmvc
+    baselineVersion: null
+    adoptionStatus: planned
+    targetBaselineVersion: 1.0.0-draft
+    targetBaselineRef: feature/g2rain-architectur-init
+    note: 待初始化项目文档并审核 Servlet 过滤器链、同步模型及与 WebFlux 的共享契约后进入 pilot
 
   - repository: g2rain/g2rain-crafter
     profile: null
