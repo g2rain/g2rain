@@ -30,6 +30,12 @@
 
 - [生命周期与跨应用契约](shell-runtime-policy.md)
 - [安全与部署边界](shell-security-policy.md)
+- [Main Shell 契约](main-shell-contract.md)
+- [基于应用编码的双模式子应用兼容方案](application-code-compatibility.md)
+- [Shell 生成与需求输入规范（Draft）](shell-generation-policy.md)
+- [Shell 需求规格模板（Draft）](shell-requirement-template.md)
+
+生成规范与 Main Shell 契约共同定义 AI 助手创建、改造和检查 Shell 时的输入、输出与验收边界。`g2rain-app-cli` 支持 `create-g2rain-app shell`，从独立的 `g2rain-shell-template` 生成 `frontend-shell` 基线；Shell 仍不能以业务子应用模板代替。
 
 ## 正式版本
 

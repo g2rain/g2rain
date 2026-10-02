@@ -16,7 +16,7 @@ Agent 根据 Profile、项目文档和 Git Diff 审核
 
 架构一致不代表所有项目完全相同。Profile 管理同类项目必须遵守的公共边界，项目只维护领域职责和经过说明的差异。
 
-唯一但会影响多个项目的平台级工具不强行抽象为 Profile，而是在 `platform-tools` 中登记其研发契约。持续运行并提供组织级运行或安全契约的唯一服务登记在 `platform-services`；两者都不因只有一个实现而创建空泛 Profile。
+唯一但会影响多个项目的平台级工具不强行抽象为 Profile，而是在 `platform-tools` 中登记其研发契约。持续运行并提供组织级运行或安全契约的唯一服务登记在 `platform-services`。被多个项目作为版本化依赖消费、但不独立运行的公共 JAR、Starter 和前端公共包登记在 `platform-libraries`；这些类型都不因只有一个实现而创建空泛 Profile。
 
 ## 当前 Profile
 
@@ -24,12 +24,20 @@ Agent 根据 Profile、项目文档和 Git Diff 审核
 | --- | --- | --- |
 | [java-domain-service](profiles/java-domain-service/README.md) | `1.0.0`（正式） | `g2rain-member` 已接入，`g2rain-department`、`g2rain-basis` 与 `g2rain-infra` 计划接入 |
 | [frontend-app](profiles/frontend-app/README.md) | `1.0.0`（正式） | 模板与 Manager App 已完成首轮验证，项目按迁移流程显式接入 |
-| [frontend-shell](profiles/frontend-shell/README.md) | `1.0.0`（正式） | `g2rain-main-shell` 已采用；继承 frontend-app 通用规则并增加主应用契约 |
+| [frontend-shell](profiles/frontend-shell/README.md) | `1.0.0`（正式） | `g2rain-main-shell` 已采用；继承 frontend-app 通用规则，并以 [Main Shell 契约](profiles/frontend-shell/main-shell-contract.md) 治理主应用不变式；双模式兼容升级见 [application-code-compatibility.md](profiles/frontend-shell/application-code-compatibility.md) |
 | [gateway-service](profiles/gateway-service/README.md) | `1.0.0-draft`（试点） | WebFlux 为首个试点，后续由 WebMVC 验证共享契约与实现差异 |
 
 后续可增加 `java-platform-service`、`java-library`、`spring-boot-starter` 和 `security-service`，不能把领域服务、Gateway 或前端规则强加给不适用的仓库。
 
 主应用不作为普通 `frontend-app` 强行接入。`frontend-shell` 通过显式基础 Profile 复用通用前端规则，并独立治理微应用生命周期、全局导航、跨应用上下文及 Shell 安全边界。
+
+## 平台共享库
+
+| 共享库 | 状态 | 中央职责 |
+| --- | --- | --- |
+| [g2rain-appkit](platform-libraries/g2rain-appkit.md) | Supporting Library，库内实现已完成，Member 整体验证中，尚未发布 | 维护主题、UI、HTTP、Platform 公共包的职责边界、依赖方向及跨仓库版本契约 |
+
+`g2rain-appkit` 与 `g2rain-common`、`g2rain-spring-boot-starter` 的平台角色相同，都是 Supporting Library；三者的实现技术、制品和消费契约不同。当前先完成 `g2rain-appkit` 的中央登记，其余同类仓库按各自现状另行接入。
 
 ## 平台工具
 
@@ -72,6 +80,7 @@ Profile 版本与中央仓库快照 Tag 是两个维度：Profile 独立演进�
 - `migrations`：基线升级和批量迁移流程。
 - `platform-tools`：唯一或共享平台工具的定位、跨仓库契约和兼容关系。
 - `platform-services`：持续运行的平台唯一服务、跨仓库运行契约和安全边界。
+- `platform-libraries`：通过版本化制品提供组织级公共能力的 Supporting Library 及消费契约。
 
 ## 项目接入
 

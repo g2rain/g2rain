@@ -96,6 +96,31 @@ projects:
     deviationsFile: docs/architecture/deviations.md
     note: 项目已建立 AGENTS.md、docs/project.yaml 和专题文档；浏览器、main-shell、IAM 与 Gateway 集成仍按项目发布流程验证
 
+  - repository: g2rain/g2rain-appkit
+    profile: null
+    family: platform-shared-library
+    architectureType: platform-shared-library
+    implementationType: frontend-shared-packages
+    adoptionStatus: supporting-library
+    platformRole: supporting-library
+    implementationPolicy: organization-singleton
+    centralDocument: docs/architecture/platform-libraries/g2rain-appkit.md
+    relatedProfiles:
+      - frontend-app
+      - frontend-shell
+    peerLibraries:
+      - g2rain/g2rain-common
+      - g2rain/g2rain-spring-boot-starter
+    packages:
+      - "@g2rain/theme"
+      - "@g2rain/ui"
+      - "@g2rain/http"
+      - "@g2rain/platform"
+    documentationStatus: central-and-project-documented
+    validationStatus: pilot-integration-in-progress
+    reviewedAt: "2026-09-19"
+    note: 与 g2rain-common、g2rain-spring-boot-starter 同为 Supporting Library；Theme、UI、HTTP 与 Platform 首版已通过库内验证，当前以 g2rain-member-app 验证独立运行、qiankun 集成与 Main/Sub 协作。验证期间仅使用 npm pack 制品，整体验证通过后才发布任何 npm 包。
+
   - repository: g2rain/g2rain-main-shell
     profile: frontend-shell
     baseProfile: frontend-app

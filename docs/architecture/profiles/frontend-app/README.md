@@ -11,13 +11,14 @@ Java 后端服务、公共 JAR、Spring Boot Starter、Gateway、IAM 和纯 Node
 1. 目标层次为 `shared → components → platform → runtime → views`，依赖只从上层指向下层；`main.ts`/`App.vue` 是组合根。
 2. shared 不依赖 Vue 业务状态；components 不直接依赖 platform/runtime/views；platform 不依赖应用 runtime/views。
 3. views 拥有业务页面、页面 API、业务类型和 Mock，不能把领域逻辑下沉到通用组件。
-4. 可复用模块通过稳定 `index.ts` 暴露公共 API，不深度导入内部实现。
-5. 微前端 App 同时设计集成模式和可诊断的独立模式；集成模式由 main-shell 传递可信运行上下文。
-6. App 通过 IAM 完成认证，通过 Gateway 使用后端业务接口；前端权限不替代后端鉴权。
-7. 页面代码和资源配置生成结果必须人工 Review、构建和测试，生成器不是架构或领域事实来源。
-8. Token、私钥和生产 Secret 不进入前端 Bundle、运行时公开配置、Mock 或仓库。
-9. 目录、公共 API、配置、生成器和运行流程变化必须同步项目 docs。
-10. Agent 在任务期间动态检查架构、文档与 Diff，不要求仓库维护 Agent 专用验证脚本。
+4. Vue 单文件组件必须使用 Composition API 和 `<script setup lang="ts">`，禁止新增 Options API（如 `data`、`methods`、`computed` 选项和选项式生命周期钩子）。
+5. 可复用模块通过稳定 `index.ts` 暴露公共 API，不深度导入内部实现。
+6. 微前端 App 同时设计集成模式和可诊断的独立模式；集成模式由 main-shell 传递可信运行上下文。
+7. App 通过 IAM 完成认证，通过 Gateway 使用后端业务接口；前端权限不替代后端鉴权。
+8. 页面代码和资源配置生成结果必须人工 Review、构建和测试，生成器不是架构或领域事实来源。
+9. Token、私钥和生产 Secret 不进入前端 Bundle、运行时公开配置、Mock 或仓库。
+10. 目录、公共 API、配置、生成器和运行流程变化必须同步项目 docs。
+11. Agent 在任务期间动态检查架构、文档与 Diff，不要求仓库维护 Agent 专用验证脚本。
 
 ## 专题规范
 

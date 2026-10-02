@@ -55,6 +55,7 @@ g2rain 开源组织与平台总入口，集中介绍平台愿景、整体架构�
 | 生态仓库导航 | 集中连接平台基础服务、前端应用、脚手架、组件和部署项目。 |
 | 架构资料 | 通过 docs 中的架构图与说明展示平台组成和协作关系。 |
 | 架构基线 | 维护多仓库项目的架构 Profile、跨项目 ADR、版本与迁移规则。 |
+| 平台共享库 | 登记公共 JAR、Starter 和前端公共包等 Supporting Library 及其兼容契约。 |
 | 社区治理 | 维护贡献方式、组织治理、社区规范与讨论入口。 |
 
 ## 使用场景
@@ -112,6 +113,7 @@ flowchart LR
 | docs | 维护平台架构图与说明资料。 | docs |
 | docs/architecture | 维护组织级架构 Profile、ADR、项目目录和迁移规则。 | docs/architecture |
 | docs/architecture/platform-tools | 登记唯一或共享平台工具的定位、跨仓库契约和版本关系。 | docs/architecture/platform-tools |
+| docs/architecture/platform-libraries | 登记平台 Supporting Library 的公共 API、依赖方向、发布与消费契约。 | docs/architecture/platform-libraries |
 | community | 维护社区协作与公共规范。 | community |
 | governance | 维护组织治理机制与角色说明。 | governance |
 
@@ -142,6 +144,8 @@ g2rain 使用“组织级 Profile + 项目基线声明 + 显式例外”的方�
 
 组织级唯一实现分别按职责登记：`g2rain-app-cli` 是研发期平台工具；[`g2rain-iam`](docs/architecture/platform-services/g2rain-iam.md) 是持续运行的平台唯一安全服务，维护认证、授权、Token、IdP 及跨仓库安全契约。
 
+[`g2rain-appkit`](docs/architecture/platform-libraries/g2rain-appkit.md) 与 `g2rain-common`、`g2rain-spring-boot-starter` 具有相同的平台角色，均为被其他项目按版本依赖的 Supporting Library。`g2rain-appkit` 统一发布主题、UI、HTTP 与运行时公共能力，不作为浏览器 App 采用 `frontend-app` Profile。
+
 [`g2rain-crafter`](docs/architecture/platform-tools/g2rain-crafter.md) 是官方后端项目与代码生成 Maven 插件，通过统一 `bootstrap` Goal 创建 API/Biz/Startup 骨架并复用底层 Generator 生成业务代码。
 
 [`g2rain-generator-maven-plugin`](docs/architecture/platform-tools/g2rain-generator-maven-plugin.md) 是 Crafter foundry 阶段使用的官方后端数据库代码生成引擎，也可通过独立 `generate` Goal 使用。
@@ -160,6 +164,7 @@ g2rain 使用“组织级 Profile + 项目基线声明 + 显式例外”的方�
 | g2rain-main-shell | 作为微前端主应用，负责装载子应用并提供统一平台入口。 |
 | [g2rain-app-cli](https://github.com/g2rain/g2rain-app-cli) | 唯一官方前端项目脚手架，从标准模板生成采用中央 `frontend-app` Profile 的业务 App。 |
 | [g2rain-app-template](https://github.com/g2rain/g2rain-app-template) | 为官方 CLI 提供前端目录、运行时、资源生成、构建部署和项目文档基线。 |
+| [g2rain-appkit](https://github.com/g2rain/g2rain-appkit) | 与 g2rain-common、Starter 同类的 Supporting Library，提供版本化前端公共包。 |
 
 ## 参与贡献
 
