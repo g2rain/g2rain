@@ -1,0 +1,38 @@
+schemaVersion: 1
+name: g2rain
+family: platform-architecture-governance
+role: G2rain 组织级架构、治理与生态导航的事实来源
+repository: g2rain/g2rain
+
+architecture:
+  authority: central
+  profile: null
+  adoptionStatus: source-of-truth
+  owns:
+    - 平台架构与术语
+    - 版本化架构 Profile
+    - 跨项目 ADR
+    - 项目目录与基线接入状态
+    - 架构治理与迁移规则
+  excludes:
+    - 项目 Requirements、领域设计与项目级 ADR
+    - 业务应用、服务或部署实现
+    - 项目运行配置、密钥与环境凭据
+
+documentation:
+  entry: docs/index.md
+  architecture: docs/architecture/README.md
+  profiles: docs/architecture/profiles
+  decisions: docs/architecture/decisions/README.md
+  catalog: docs/architecture/catalog/projects.yaml
+  migrations: docs/architecture/migrations/README.md
+  governance: governance/architecture-governance.md
+
+validation:
+  buildCommand: null
+  testCommand: null
+  documentationChecks:
+    - Markdown 相对链接
+    - Profile、目录与治理文档的交叉引用
+    - git diff --check
+  note: 本仓库只维护文档与治理资料，不提供应用构建或测试命令。

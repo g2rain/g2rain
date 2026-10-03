@@ -43,6 +43,12 @@ requiredDocuments:
   - docs/operations/deployment.md
   - docs/security/security-boundaries.md
   - docs/requirements/README.md
+generationSpecification:
+  status: draft
+  contract: main-shell-contract.md
+  policy: shell-generation-policy.md
+  requirementTemplate: shell-requirement-template.md
+  note: Shell 可由 g2rain-app-cli shell 从 g2rain-shell-template 生成基线，也可按需求规格创建、改造和检查；不得使用 frontend-app 模板代替 Shell。
 validation:
   buildCommand: npm run build
   releaseEvidence: production-build

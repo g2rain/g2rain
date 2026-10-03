@@ -2,6 +2,9 @@
 
 本目录维护 g2rain 的平台级架构、项目架构基线和跨仓库治理规则。各业务仓库继续维护自身需求、领域设计、配置、运维和项目级架构决策。
 
+- [中央项目元数据](project.yaml)
+- [AI Coding 执行入口](../AGENTS.md)
+
 ## 平台资料
 
 - [平台架构说明](architecture.md)
@@ -13,8 +16,11 @@
 - [Java 领域服务 Profile](architecture/profiles/java-domain-service/README.md)
 - [前端 App Profile](architecture/profiles/frontend-app/README.md)
 - [前端 Shell Profile](architecture/profiles/frontend-shell/README.md)
+- [Gateway Service Profile（Draft）](architecture/profiles/gateway-service/README.md)
 - [平台唯一服务目录](architecture/platform-services/README.md)
 - [g2rain-iam 平台服务登记](architecture/platform-services/g2rain-iam.md)
+- [平台共享库目录](architecture/platform-libraries/README.md)
+- [g2rain-appkit 平台共享库登记](architecture/platform-libraries/g2rain-appkit.md)
 - [g2rain-crafter 平台工具登记](architecture/platform-tools/g2rain-crafter.md)
 - [g2rain-generator-maven-plugin 平台工具登记](architecture/platform-tools/g2rain-generator-maven-plugin.md)
 - [平台工具目录](architecture/platform-tools/README.md)

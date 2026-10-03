@@ -10,6 +10,7 @@
 - [ADR-0004：逻辑删除唯一约束使用函数索引](0004-logical-delete-unique-indexes.md)
 - [ADR-0005：前端 App 采用分层单向依赖](0005-frontend-app-layering.md)
 - [ADR-0006：前端 App 支持集成与独立双运行模式](0006-frontend-app-runtime-modes.md)
+- [ADR-0007：Gateway 统一治理入口安全与可信主体边界](0007-gateway-security-boundary.md)
 
 ## 状态
 

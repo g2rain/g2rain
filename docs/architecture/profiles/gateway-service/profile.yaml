@@ -1,0 +1,65 @@
+schemaVersion: 1
+id: gateway-service
+name: Gateway Service
+version: 1.0.0-draft
+status: draft
+baselineRef: feature/g2rain-architectur-init
+targetBaselineRef: architecture-v1.3.0
+owners:
+  - g2rain architecture maintainers
+
+applicableTo:
+  - Spring Cloud Gateway Server WebFlux 平台入口
+  - Spring Cloud Gateway Server WebMVC 平台入口
+excludes:
+  - IAM 与身份签发服务
+  - Java 领域服务
+  - 前端应用与研发工具
+
+gatewayResponsibilities:
+  - dynamic-routing
+  - credential-authentication
+  - api-permission-enforcement
+  - request-integrity-verification
+  - trusted-principal-forwarding
+  - response-adaptation
+  - edge-observability
+
+controlPlane:
+  sourceOwnedFactsRequired: true
+  inMemoryCacheIsSourceOfTruth: false
+  startupFullLoadRequired: true
+  incrementalSyncDocumented: true
+
+security:
+  externalPrincipalHeadersTrusted: false
+  downstreamDomainAuthorizationRequired: true
+  secretsInRepositoryAllowed: false
+  sensitiveRequestLoggingAllowed: false
+
+requiredDocuments:
+  - AGENTS.md
+  - docs/project.yaml
+  - docs/architecture/overview.md
+  - docs/architecture/modules.md
+  - docs/architecture/dependencies.md
+  - docs/architecture/runtime-flows.md
+  - docs/architecture/deviations.md
+  - docs/api/gateway-contracts.md
+  - docs/development/testing.md
+  - docs/development/definition-of-done.md
+  - docs/operations/configuration.md
+  - docs/operations/deployment.md
+  - docs/security/security-boundaries.md
+  - docs/requirements/README.md
+
+validation:
+  buildCommand: mvn test
+  securityNegativeTestsRequired: true
+  externalIntegrationRequiredForStable: true
+  imageVerificationRequiredForRelease: true
+
+pilotImplementations:
+  - g2rain/g2rain-gateway-webflux
+plannedImplementations:
+  - g2rain/g2rain-gateway-webmvc
