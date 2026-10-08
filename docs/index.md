@@ -4,6 +4,7 @@
 
 - [中央项目元数据](project.yaml)
 - [AI Coding 执行入口](../AGENTS.md)
+- [组织默认文档约定](organization-defaults.md)
 
 ## 平台资料
 
@@ -30,6 +31,13 @@
 - [项目架构目录](architecture/catalog/projects.yaml)
 - [架构迁移流程](architecture/migrations/README.md)
 - [架构治理机制](../governance/architecture-governance.md)
+
+## 社区与治理
+
+- [贡献指南](../community/CONTRIBUTING.md)
+- [行为准则](../community/CODE_OF_CONDUCT.md)
+- [组织治理](../governance/governance.md)
+- [安全与漏洞披露](../governance/security.md)
 
 ## 事实来源边界
 
