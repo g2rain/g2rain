@@ -149,6 +149,22 @@ projects:
     reviewedAt: "2026-08-26"
     note: IAM 是持续运行的统一认证、授权与 Token 服务，不是研发工具或普通领域服务；mvn test 通过，外部 IdP 与跨服务联调仍按发布流程执行
 
+  - repository: g2rain/g2rain-federation-forwarder
+    profile: null
+    architectureType: federation-forwarder
+    adoptionStatus: planned
+    centralDecision: docs/architecture/decisions/0008-federation-forwarder.md
+    documentationStatus: initialized
+    note: 私有部署环境的通用联邦转发服务；私有持有本地机构绑定、机构 Client DPoP 与加密 Token，云端 IAM/Basis 仍为授权主数据；尚未实现或联调
+
+  - repository: g2rain/g2rain-federation-auth-app
+    profile: null
+    architectureType: federation-auth-app
+    adoptionStatus: planned
+    centralDecision: docs/architecture/decisions/0008-federation-forwarder.md
+    documentationStatus: initialized
+    note: 私有部署环境的联邦管理员授权页面；仅获取 clientId、跳转云端授权并回交授权码，不保存凭据；尚未实现或联调
+
   - repository: g2rain/g2rain-gateway-webflux
     profile: gateway-service
     implementationType: webflux

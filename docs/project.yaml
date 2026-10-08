@@ -21,12 +21,16 @@ architecture:
 
 documentation:
   entry: docs/index.md
+  organizationDefaults: docs/organization-defaults.md
   architecture: docs/architecture/README.md
   profiles: docs/architecture/profiles
   decisions: docs/architecture/decisions/README.md
   catalog: docs/architecture/catalog/projects.yaml
   migrations: docs/architecture/migrations/README.md
   governance: governance/architecture-governance.md
+  contribution: community/CONTRIBUTING.md
+  codeOfConduct: community/CODE_OF_CONDUCT.md
+  security: governance/security.md
 
 validation:
   buildCommand: null
