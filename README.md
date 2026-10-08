@@ -41,7 +41,7 @@ g2rain 开源组织与平台总入口，集中介绍平台愿景、整体架构�
 
 ## 平台定位
 
-该仓库用于组装或运行 g2rain 平台环境。
+该仓库是 G2rain 的组织级架构与治理事实来源：维护平台术语、版本化架构 Profile、跨项目 ADR、项目目录与迁移规则。它不包含可部署应用，也不承载任何项目的运行时实现。
 
 ## 业务域说明
 
@@ -56,6 +56,7 @@ g2rain 开源组织与平台总入口，集中介绍平台愿景、整体架构�
 | 架构资料 | 通过 docs 中的架构图与说明展示平台组成和协作关系。 |
 | 架构基线 | 维护多仓库项目的架构 Profile、跨项目 ADR、版本与迁移规则。 |
 | 平台共享库 | 登记公共 JAR、Starter 和前端公共包等 Supporting Library 及其兼容契约。 |
+| 项目接入目录 | 记录项目采用的 Profile、固定基线、验证状态与已登记的架构例外。 |
 | 社区治理 | 维护贡献方式、组织治理、社区规范与讨论入口。 |
 
 ## 使用场景
@@ -94,13 +95,16 @@ flowchart LR
 | 步骤 | 命令或位置 | 说明 |
 | --- | --- | --- |
 | 浏览平台 | `https://www.g2rain.com` | 访问官方网站了解平台。 |
-| 查看项目 | `https://github.com/orgs/g2rain/repositories` | 浏览组织全部开源仓库。 |
+| 查阅架构基线 | [docs/architecture/README.md](docs/architecture/README.md) | 了解 Profile、平台工具、共享库、唯一服务及基线版本。 |
+| 查看项目目录 | [docs/architecture/catalog/projects.yaml](docs/architecture/catalog/projects.yaml) | 按项目的接入状态与固定基线选择后续仓库。 |
 
 ## 安全说明
 
 | 主题 | 说明 |
 | --- | --- |
 | 公开信息 | 组织入口只发布可公开的平台、治理和社区信息，不应包含内部凭据或未公开资料。 |
+| 架构决策 | 跨项目的模块、协作、安全或发布规则必须先形成中央 ADR、经过代表项目试点并由项目显式升级；不得静默改写项目基线。 |
+| 安全报告 | 未修复的安全问题不应公开披露；请遵循 [安全与漏洞披露流程](governance/security.md)。 |
 
 ## 与关联仓库的关系
 
@@ -149,6 +153,10 @@ g2rain 使用“组织级 Profile + 项目基线声明 + 显式例外”的方�
 [`g2rain-crafter`](docs/architecture/platform-tools/g2rain-crafter.md) 是官方后端项目与代码生成 Maven 插件，通过统一 `bootstrap` Goal 创建 API/Biz/Startup 骨架并复用底层 Generator 生成业务代码。
 
 [`g2rain-generator-maven-plugin`](docs/architecture/platform-tools/g2rain-generator-maven-plugin.md) 是 Crafter foundry 阶段使用的官方后端数据库代码生成引擎，也可通过独立 `generate` Goal 使用。
+
+最新的 [ADR-0008：通用联邦转发与本地环境授权绑定](docs/architecture/decisions/0008-federation-forwarder.md) 处于“建议”状态，登记的 `g2rain-federation-forwarder` 与 `g2rain-federation-auth-app` 均为计划组件，尚未实现或联调。它们不能被当作当前可用的平台服务。
+
+[知识服务跨仓库集成设计与闭环评估](docs/architecture/knowledge-service-integration-design.md) 同样是设计评估稿：知识服务的业务设计、代码和运行验证仍归 `g2rain-knowledge` 仓库所有，中央文档不代表服务已完成交付。
 
 ## 常见问题
 

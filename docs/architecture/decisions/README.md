@@ -11,6 +11,7 @@
 - [ADR-0005：前端 App 采用分层单向依赖](0005-frontend-app-layering.md)
 - [ADR-0006：前端 App 支持集成与独立双运行模式](0006-frontend-app-runtime-modes.md)
 - [ADR-0007：Gateway 统一治理入口安全与可信主体边界](0007-gateway-security-boundary.md)
+- [ADR-0008：通用联邦转发与本地环境授权绑定](0008-federation-forwarder.md)
 
 ## 状态
 

@@ -2,6 +2,8 @@
 
 本目录是 g2rain 多仓库项目的组织级架构事实来源，用于让同类型项目共享稳定、可版本化的架构规则。
 
+跨仓库方案评估见 [知识服务集成设计与闭环评估](knowledge-service-integration-design.md)；知识领域的详细设计仍由 `g2rain-knowledge` 仓库维护。
+
 ## 核心模型
 
 ```text

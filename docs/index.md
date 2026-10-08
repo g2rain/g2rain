@@ -10,6 +10,7 @@
 - [平台架构说明](architecture.md)
 - [平台概览](overview.md)
 - [组织级架构基线](architecture/README.md)
+- [知识服务跨仓库集成设计与闭环评估](architecture/knowledge-service-integration-design.md)
 
 ## 架构治理
 
