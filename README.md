@@ -1,12 +1,12 @@
 <p align="center">
-  <img src="https://github.com/g2rain.png" alt="谷雨 G2rain" width="120" />
+  <img src="https://github.com/g2rain.png" alt="谷雨G2rain智能体平台" width="120" />
 </p>
 
-# 谷雨 G2rain 开源 AI Native SaaS 平台
+# 谷雨G2rain智能体平台
 
-**企业级权限管控 + SaaS Agent 编排，让业务能力在明确的授权边界内被使用与组合。**
+**面向企业的开源智能体平台，连接模型、知识与业务工具，让智能体在明确的身份和权限边界内执行任务。**
 
-G2rain 是围绕企业应用长期演进协作的开源组织。我们以 Java 微服务、Vue 3 微前端、知识与 Agent 能力为主要工程方向，通过多仓库分工与统一架构治理，共同建设 AI Native SaaS 平台。
+G2rain 是围绕企业应用长期演进协作的开源组织。我们以 Java 微服务、Vue 3 微前端、知识与 Agent 能力为主要工程方向，通过多仓库分工与统一架构治理，共同建设面向企业的开源智能体平台。
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
@@ -19,7 +19,7 @@ G2rain 是围绕企业应用长期演进协作的开源组织。我们以 Java �
 | 方向 | 要解决的问题 | 进一步了解 |
 | --- | --- | --- |
 | **企业级权限管控** | 哪个租户开通哪些能力，哪个岗位可以操作哪些功能与数据 | [权限模型与服务分工](docs/permission-model.md) |
-| **SaaS Agent 编排** | 如何将知识、业务能力与执行步骤组织起来，并验证调用身份和授权边界 | [Agent 能力与集成边界](docs/overview.md#agent-能力) |
+| **智能体编排** | 如何将知识、业务能力与执行步骤组织起来，并验证调用身份和授权边界 | [Agent 能力与集成边界](docs/overview.md#agent-能力) |
 | **应用开发与协作** | 如何让前后端应用、研发工具与多仓库架构持续演进 | [架构基线](docs/architecture/README.md) · [开发入口](docs/getting-started.md) |
 
 ## 企业级权限管控
@@ -42,7 +42,7 @@ flowchart LR
 
 **从业务知识出发，用对话获得参考，让执行过程可以查看。** 下面展示围绕平台入门指南连续提问的界面，回答中显示知识参考来源。
 
-![谷雨 G2rain 知识问答：围绕账号使用连续提问并显示入门指南参考](docs/images/showcase/knowledge-conversation.png)
+![谷雨G2rain智能体平台 知识问答：围绕账号使用连续提问并显示入门指南参考](docs/images/showcase/knowledge-conversation.png)
 
 | 场景 | 展示重点 |
 | --- | --- |
@@ -96,7 +96,7 @@ flowchart LR
 - 公开交流：[Issues](https://github.com/g2rain/g2rain/issues) · [Discussions](https://github.com/g2rain/g2rain/discussions)
 - 官方网站：[www.g2rain.com](https://www.g2rain.com)
 
-**微信一对一交流**：欢迎扫码添加项目维护者「行者」，交流企业权限、知识库、SaaS Agent 编排与项目合作。添加时可备注“G2rain + 你的交流主题”。
+**微信一对一交流**：欢迎扫码添加项目维护者「行者」，交流企业权限、知识库、智能体编排与项目合作。添加时可备注“G2rain + 你的交流主题”。
 
 <a href="docs/images/contact/wechat.jpg">
   <img src="docs/images/contact/wechat.jpg" alt="项目维护者行者的微信二维码，扫码添加好友进行 G2rain 一对一交流" width="280" />
@@ -106,4 +106,4 @@ flowchart LR
 
 ## 许可证
 
-本仓库采用 [Apache License 2.0](LICENSE)，各子项目请查看其对应许可证。感谢每一位使用、反馈、分享与贡献谷雨 G2rain 的朋友。
+本仓库采用 [Apache License 2.0](LICENSE)，各子项目请查看其对应许可证。感谢每一位使用、反馈、分享与贡献谷雨G2rain智能体平台的朋友。
