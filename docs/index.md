@@ -13,6 +13,7 @@
 | 哪些已登记，哪些还在验证或规划 | [项目进展与路线图](roadmap.md) → [项目架构目录](architecture/catalog/projects.yaml) |
 | 与其他开源项目如何选型 | [RuoYi、Dify、RAGFlow 对比](comparison.md) |
 | 如何参与 | [贡献指南](../community/CONTRIBUTING.md) → [社区与治理](#社区与治理) |
+| 查看前端开发工具发布 | [2026-10-29：Appkit、App CLI 与两个模板 v1.0.1](releases/ecosystem-v2026.10.29.md) |
 
 ## 文档结构与维护分工
 
