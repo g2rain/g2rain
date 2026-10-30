@@ -196,8 +196,11 @@ projects:
     implementationPolicy: organization-singleton
     centralDocument: docs/architecture/platform-tools/g2rain-crafter.md
     relatedProfile: java-domain-service
-    currentVersion: 1.0.7
-    generatorDependency: com.g2rain:g2rain-generator-maven-plugin:1.0.6
+    currentVersion: 1.0.9
+    releaseTag: v1.0.9
+    releaseUrl: https://github.com/g2rain/g2rain-crafter/releases/tag/v1.0.9
+    releaseCheckedAt: "2026-10-30"
+    generatorDependency: com.g2rain:g2rain-generator-maven-plugin:1.0.8
     documentationStatus: central-documented
     validationStatus: test-passed
     testsRun: 12
@@ -213,9 +216,48 @@ projects:
     centralDocument: docs/architecture/platform-tools/g2rain-generator-maven-plugin.md
     relatedProfile: java-domain-service
     upstreamTool: g2rain/g2rain-crafter
-    currentVersion: 1.0.6
+    currentVersion: 1.0.8
+    releaseTag: v1.0.8
+    releaseUrl: https://github.com/g2rain/g2rain-generator-maven-plugin/releases/tag/v1.0.8
+    releaseCheckedAt: "2026-10-30"
     documentationStatus: central-documented
     validationStatus: test-passed
     testsRun: 31
     reviewedAt: "2026-08-27"
     note: Generator 是 Crafter foundry 的底层生成引擎，也可独立执行 generate Goal；mvn test 通过，真实数据库生成与生成项目构建待验证
+
+  - repository: g2rain/g2rain-common
+    profile: null
+    architectureType: platform-shared-library
+    adoptionStatus: supporting-library
+    platformRole: supporting-library
+    centralDocument: docs/architecture/platform-libraries/g2rain-common.md
+    currentVersion: 1.0.9
+    releaseTag: v1.0.9
+    releaseUrl: https://github.com/g2rain/g2rain-common/releases/tag/v1.0.9
+    releaseCheckedAt: "2026-10-30"
+    note: 根据 GitHub Release 与同名 Tag 登记；未重新执行构建或联调，不变更消费者架构基线
+
+  - repository: g2rain/g2rain-mybatis-extensions
+    profile: null
+    architectureType: platform-shared-library
+    adoptionStatus: supporting-library
+    platformRole: supporting-library
+    centralDocument: docs/architecture/platform-libraries/g2rain-mybatis-extensions.md
+    currentVersion: 1.0.5
+    releaseTag: v1.0.5
+    releaseUrl: https://github.com/g2rain/g2rain-mybatis-extensions/releases/tag/v1.0.5
+    releaseCheckedAt: "2026-10-30"
+    note: 根据 GitHub Release 与同名 Tag 登记；未重新执行构建或联调，不变更消费者架构基线
+
+  - repository: g2rain/g2rain-spring-boot-starter
+    profile: null
+    architectureType: platform-shared-library
+    adoptionStatus: supporting-library
+    platformRole: supporting-library
+    centralDocument: docs/architecture/platform-libraries/g2rain-spring-boot-starter.md
+    currentVersion: 1.0.6
+    releaseTag: v1.0.6
+    releaseUrl: https://github.com/g2rain/g2rain-spring-boot-starter/releases/tag/v1.0.6
+    releaseCheckedAt: "2026-10-30"
+    note: 根据 GitHub Release 与同名 Tag 登记；未重新执行构建或联调，不变更消费者架构基线
