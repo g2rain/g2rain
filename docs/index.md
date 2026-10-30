@@ -1,4 +1,4 @@
-# 谷雨G2rain智能体平台文档导航
+# G2rain（谷雨）开源智能体平台文档导航
 
 这里连接组织介绍、平台专题、开发入口与架构治理。应用运行配置、部署步骤和测试记录由各项目维护，本目录提供平台级入口与协作规则。
 
@@ -13,6 +13,9 @@
 | 哪些已登记，哪些还在验证或规划 | [项目进展与路线图](roadmap.md) → [项目架构目录](architecture/catalog/projects.yaml) |
 | 与其他开源项目如何选型 | [RuoYi、Dify、RAGFlow 对比](comparison.md) |
 | 如何参与 | [贡献指南](../community/CONTRIBUTING.md) → [社区与治理](#社区与治理) |
+| 查看前端开发工具发布 | [2026-10-29：Appkit、App CLI 与两个模板 v1.0.1](releases/ecosystem-v2026.10.29.md) |
+
+- [2026-10-30 后端工具链发布：Common、MyBatis Extensions、Starter、Generator 与 Crafter](releases/backend-ecosystem-v2026.10.30.md)
 
 ## 文档结构与维护分工
 
@@ -46,6 +49,9 @@
 - [Gateway Service Profile（Draft）](architecture/profiles/gateway-service/README.md)
 - [平台唯一服务目录](architecture/platform-services/README.md)
 - [g2rain-iam 平台服务登记](architecture/platform-services/g2rain-iam.md)
+- [g2rain-common 版本登记](architecture/platform-libraries/g2rain-common.md)
+- [g2rain-mybatis-extensions 版本登记](architecture/platform-libraries/g2rain-mybatis-extensions.md)
+- [g2rain-spring-boot-starter 版本登记](architecture/platform-libraries/g2rain-spring-boot-starter.md)
 - [平台共享库目录](architecture/platform-libraries/README.md)
 - [g2rain-appkit 平台共享库登记](architecture/platform-libraries/g2rain-appkit.md)
 - [g2rain-crafter 平台工具登记](architecture/platform-tools/g2rain-crafter.md)

@@ -8,9 +8,11 @@
 | 架构类型 | `backend-scaffolding-maven-plugin` |
 | 平台身份 | g2rain 官方后端项目骨架与业务代码生成器 |
 | 实现策略 | `organization-singleton` |
-| 当前版本 | `1.0.7` |
+| 当前版本 | `1.0.9` |
+| 发布 Tag | [1.0.9](https://github.com/g2rain/g2rain-crafter/releases/tag/v1.0.9) |
+| 发布核对日期 | 2026-10-30 |
 | Maven Goal | `g2rain:bootstrap` |
-| 上游生成器 | `com.g2rain:g2rain-generator-maven-plugin:1.0.6` |
+| 上游生成器 | `com.g2rain:g2rain-generator-maven-plugin:1.0.8` |
 | 关联 Profile | [`java-domain-service 1.0.0`](../profiles/java-domain-service/README.md) |
 
 `g2rain-crafter` 是开发期 Maven 插件，不是生产服务，也不采用生成项目的运行时 Profile。它通过 skeleton 阶段生成 API/Biz/Startup 多模块骨架，通过 foundry 阶段调用底层生成器持续生成数据库业务代码。
@@ -56,6 +58,8 @@ Crafter 版本、底层 generator 版本、内置模板和 Profile 版本是独�
 | `1.0.7` | `1.0.6` | `java-domain-service 1.0.0` | `mvn test` 12 个测试通过；真实数据库与生成项目构建待验证 |
 
 Profile 或模板结构变化时，必须在临时目录生成完整项目、确认无未替换占位符、执行目标项目构建，并审核 Diff 和覆盖范围。只通过插件自身单元测试不足以证明生成结果可用。
+
+最新发布组合为 Crafter `1.0.9` + Generator `1.0.8`，见[后端工具链发布](../../releases/backend-ecosystem-v2026.10.30.md)。上表及文末测试记录是 2026-08-27 的历史验证，不作为最新版本的测试结果。
 
 ## 最低验收要求
 

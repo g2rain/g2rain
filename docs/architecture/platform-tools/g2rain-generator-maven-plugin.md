@@ -8,9 +8,11 @@
 | 架构类型 | `backend-code-generation-maven-plugin` |
 | 平台身份 | g2rain 官方后端数据库代码生成引擎 |
 | 实现策略 | `organization-singleton` |
-| 当前版本 | `1.0.6` |
+| 当前版本 | `1.0.8` |
+| 发布 Tag | [1.0.8](https://github.com/g2rain/g2rain-generator-maven-plugin/releases/tag/v1.0.8) |
+| 发布核对日期 | 2026-10-30 |
 | Maven Goal | `g2rain:generate` |
-| 上层编排 | [`g2rain-crafter 1.0.7`](g2rain-crafter.md) |
+| 上层编排 | [`g2rain-crafter 1.0.9`](g2rain-crafter.md) |
 | 关联 Profile | [`java-domain-service 1.0.0`](../profiles/java-domain-service/README.md) |
 
 该插件读取 JDBC 表元数据，通过 MyBatis Generator 生成 PO/Mapper，并通过 FreeMarker 生成 API、DTO、VO、DAO、Service、Controller 和应用配置。它是开发期工具，不是生产服务，也不采用生成项目的运行时 Profile。
@@ -44,6 +46,8 @@ Crafter 和 Generator 均可发布独立版本。Crafter 必须固定 Generator 
 | Crafter | Generator | 目标 Profile | 状态 |
 | --- | --- | --- | --- |
 | `1.0.7` | `1.0.6` | `java-domain-service 1.0.0` | Crafter 12 个、Generator 31 个测试通过；真实数据库与生成项目构建待验证 |
+
+最新发布组合为 Crafter `1.0.9` + Generator `1.0.8`，见[后端工具链发布](../../releases/backend-ecosystem-v2026.10.30.md)。上表及文末测试记录是 2026-08-27 的历史验证，不作为最新版本的测试结果。
 
 ## 最低验收
 

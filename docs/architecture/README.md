@@ -39,15 +39,15 @@ Agent 根据 Profile、项目文档和 Git Diff 审核
 | --- | --- | --- |
 | [g2rain-appkit](platform-libraries/g2rain-appkit.md) | Supporting Library，库内实现已完成，Member 整体验证中，尚未发布 | 维护主题、UI、HTTP、Platform 公共包的职责边界、依赖方向及跨仓库版本契约 |
 
-`g2rain-appkit` 与 `g2rain-common`、`g2rain-spring-boot-starter` 的平台角色相同，都是 Supporting Library；三者的实现技术、制品和消费契约不同。当前先完成 `g2rain-appkit` 的中央登记，其余同类仓库按各自现状另行接入。
+`g2rain-appkit` 与 `g2rain-common`、`g2rain-spring-boot-starter` 的平台角色相同，都是 Supporting Library；三者的实现技术、制品和消费契约不同。后端共享库已补齐版本登记，见[共享库目录](platform-libraries/README.md)与[2026-10-30 后端工具链发布](../releases/backend-ecosystem-v2026.10.30.md)。
 
 ## 平台工具
 
 | 工具 | 状态 | 中央职责 |
 | --- | --- | --- |
 | [g2rain-app-cli](platform-tools/g2rain-app-cli.md) | 官方唯一前端项目脚手架，正式兼容组合待发布 | 维护其平台定位以及 CLI、模板、生成 App 与 `frontend-app` Profile 的关系 |
-| [g2rain-crafter](platform-tools/g2rain-crafter.md) | 官方唯一后端项目与代码生成 Maven 插件；12 个测试通过 | 维护 Crafter、底层 Generator、模板、生成服务与 `java-domain-service` 的关系 |
-| [g2rain-generator-maven-plugin](platform-tools/g2rain-generator-maven-plugin.md) | 官方唯一后端数据库代码生成引擎；31 个测试通过 | 维护表元数据、模板、生成代码、Crafter 与 `java-domain-service` 的关系 |
+| [g2rain-crafter](platform-tools/g2rain-crafter.md) | 官方唯一后端项目与代码生成 Maven 插件；v1.0.9 已发布（原测试记录见登记） | 维护 Crafter、底层 Generator、模板、生成服务与 `java-domain-service` 的关系 |
+| [g2rain-generator-maven-plugin](platform-tools/g2rain-generator-maven-plugin.md) | 官方唯一后端数据库代码生成引擎；v1.0.8 已发布（原测试记录见登记） | 维护表元数据、模板、生成代码、Crafter 与 `java-domain-service` 的关系 |
 
 ## 平台唯一服务
 
