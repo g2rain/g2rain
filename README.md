@@ -1,12 +1,12 @@
 <p align="center">
-  <img src="https://github.com/g2rain.png" alt="谷雨G2rain智能体平台" width="120" />
+  <img src="https://github.com/g2rain.png" alt="G2rain（谷雨）开源智能体平台" width="120" />
 </p>
 
-# 谷雨G2rain智能体平台
+# G2rain（谷雨）开源智能体平台
 
 **面向企业的开源智能体平台，连接模型、知识与业务工具，让智能体在明确的身份和权限边界内执行任务。**
 
-G2rain 是围绕企业应用长期演进协作的开源组织。我们以 Java 微服务、Vue 3 微前端、知识与 Agent 能力为主要工程方向，通过多仓库分工与统一架构治理，共同建设面向企业的开源智能体平台。
+G2rain（谷雨）是开源智能体平台，面向企业场景连接模型、知识与业务工具，以身份与权限管理支撑智能体和业务应用的协作。平台采用 Java 微服务与 Vue 3 微前端，通过公共组件、研发工具和多仓库协作持续演进。
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
@@ -42,7 +42,7 @@ flowchart LR
 
 **从业务知识出发，用对话获得参考，让执行过程可以查看。** 下面展示围绕平台入门指南连续提问的界面，回答中显示知识参考来源。
 
-![谷雨G2rain智能体平台 知识问答：围绕账号使用连续提问并显示入门指南参考](docs/images/showcase/knowledge-conversation.png)
+![G2rain（谷雨）开源智能体平台 知识问答：围绕账号使用连续提问并显示入门指南参考](docs/images/showcase/knowledge-conversation.png)
 
 | 场景 | 展示重点 |
 | --- | --- |
@@ -106,4 +106,4 @@ flowchart LR
 
 ## 许可证
 
-本仓库采用 [Apache License 2.0](LICENSE)，各子项目请查看其对应许可证。感谢每一位使用、反馈、分享与贡献谷雨G2rain智能体平台的朋友。
+本仓库采用 [Apache License 2.0](LICENSE)，各子项目请查看其对应许可证。感谢每一位使用、反馈、分享与贡献G2rain（谷雨）开源智能体平台的朋友。

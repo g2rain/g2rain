@@ -1,8 +1,8 @@
-# 谷雨 G2rain 前端工具链 v1.0.1｜从创建工程到业务开发
+# G2rain（谷雨）开源智能体平台｜前端工具链 v1.0.1｜从创建工程到业务开发
 
 **一个命令创建业务应用或主壳，用一套公共组件与平台能力，让更多时间留给业务开发。**
 
-谷雨 G2rain 是面向企业的开源智能体平台。本次集中介绍 **Appkit、App CLI、App Template、Shell Template v1.0.1**：从公共能力、工程创建到主子应用模板，为 Vue 3 业务应用提供配套开发工具。
+G2rain（谷雨）开源智能体平台面向企业应用场景，连接模型、知识与业务工具。本次集中介绍 **Appkit、App CLI、App Template、Shell Template v1.0.1**：从公共能力、工程创建到主子应用模板，为 Vue 3 业务应用提供配套开发工具。
 
 **[访问官网](https://www.g2rain.com) · [探索源码](https://github.com/g2rain/g2rain) · [开发入门](https://github.com/g2rain/g2rain/blob/main/docs/getting-started.md)**
 
