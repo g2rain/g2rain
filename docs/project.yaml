@@ -21,6 +21,7 @@ architecture:
 
 documentation:
   entry: docs/index.md
+  versions: docs/versions.md
   organizationDefaults: docs/organization-defaults.md
   architecture: docs/architecture/README.md
   profiles: docs/architecture/profiles

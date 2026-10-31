@@ -11,6 +11,7 @@
 | 企业权限怎样建模与校验 | [权限模型与完整说明图](permission-model.md) |
 | 体验知识对话和平台主应用 | [在线演示与登录说明](roadmap.md#在线演示) |
 | 知识与 Agent 的界面和业务场景 | [三张界面展示](showcase.md) → [知识与 Agent 导览](overview.md#知识库) |
+| 安装哪个 Maven / npm 版本，如何配套 | [版本与依赖](versions.md) |
 | 如何动手开发或部署 | [开始探索与开发](getting-started.md) |
 | 已发布什么，接下来做什么，如何判断完成 | [平台路线图](roadmap.md) → [项目架构目录](architecture/catalog/projects.yaml) |
 | 与其他开源项目如何选型 | [RuoYi、Dify、RAGFlow 对比](comparison.md) |
@@ -29,6 +30,7 @@
 | `docs/overview.md` | 平台概览与知识、Agent 的探索导览 |
 | `docs/permission-model.md` | 权限领域对象、服务分工、依据与核对边界 |
 | `docs/showcase.md`、`docs/images/showcase/` | 界面截图与可见交互说明 |
+| `docs/versions.md` | Maven / npm 制品版本、安装示例、环境与配套关系 |
 | `docs/getting-started.md` | 按目标选择责任项目与开发路径 |
 | `docs/roadmap.md` | 进展、验证事项、规划与后续参与方向 |
 | `docs/comparison.md` | 选型维度、范围和官方来源 |

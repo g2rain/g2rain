@@ -74,7 +74,7 @@ G2rain 是平台名称，GitHub 的 g2rain 是组织；g2rain/g2rain 是平台�
 
 - 当前平台定位和状态：[本页](project-introduction.md)、[平台概览](overview.md)、[路线图](roadmap.md)。
 - 协议：已开放模块统一采用标准 Apache-2.0，范围见[协议说明](licenses.md)；第三方组件与外部服务遵循各自条款。
-- 版本：引用各责任项目的 Release；不要将所有组件合并为同一个平台语义版本。
+- 版本：从[版本与依赖](versions.md)选择已核实的制品，并引用各责任项目 Release；不要将所有组件合并为同一个平台语义版本。
 - 架构：[架构基线](architecture/README.md)、[权限模型](permission-model.md)。架构采用状态和历史测试日期不替代当前产品开放状态。
 - 集成：[知识服务与智能体集成](architecture/knowledge-integration.md)说明职责与接入要求，具体接口以责任项目版本文档为准。
 

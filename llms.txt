@@ -8,6 +8,8 @@
 
 ## 项目资料
 
+- [版本与依赖](docs/versions.md): 已核实的 Maven / npm 制品版本、安装命令及配套关系。
+
 - [项目介绍与引用资料](docs/project-introduction.md): 介绍文案、适用场景、能力状态、平台范围和引用依据。
 - [平台概览](docs/overview.md): 能力与项目关系。
 - [路线图](docs/roadmap.md): 当前进展和后续目标。

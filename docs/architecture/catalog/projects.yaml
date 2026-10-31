@@ -143,7 +143,7 @@ projects:
     validationStatus: build-passed
     validatedAt: "2026-08-26"
     deviationsFile: docs/architecture/deviations.md
-    note: 当前唯一 Shell 实现，已完成项目文档、元数据、链接和生产构建验证并正式采用；项目安全偏差继续独立治理
+    note: 首个正式 Shell 基线验证对象；后续已有 Admin Shell 和 Shell Template，具体运行与验证记录由责任项目维护
 
   - repository: g2rain/g2rain-iam
     profile: null
@@ -182,7 +182,7 @@ projects:
     adoptionStatus: planned
     targetBaselineVersion: 1.0.0-draft
     targetBaselineRef: feature/g2rain-architectur-init
-    note: 待初始化项目文档并审核 Servlet 过滤器链、同步模型及与 WebFlux 的共享契约后进入 pilot
+    note: 项目文档和元数据已建立；远端仍声明 planned，2026-09-06 验证因 g2rain-infra-api:1.0.0 依赖解析失败而未执行测试，试点推进需完成依赖与共享契约验证
 
   - repository: g2rain/g2rain-crafter
     profile: null
@@ -257,3 +257,37 @@ projects:
     releaseUrl: https://github.com/g2rain/g2rain-spring-boot-starter/releases/tag/v1.0.6
     releaseCheckedAt: "2026-10-30"
     note: 根据 GitHub Release 与同名 Tag 登记；未重新执行构建或联调，不变更消费者架构基线
+
+  - repository: g2rain/g2rain-knowledge
+    profile: java-domain-service
+    architectureType: knowledge-retrieval-service
+    baselineVersion: 1.0.0
+    baselineRef: architecture-v1.0.0
+    adoptionStatus: planned
+    currentVersion: 1.0.0
+    releaseTag: v1.0.0
+    releaseUrl: https://github.com/g2rain/g2rain-knowledge/releases/tag/v1.0.0
+    releaseCheckedAt: "2026-10-31"
+    productStatus: released
+    deploymentStatus: available
+    validationStatus: partially-verified
+    centralDocument: docs/architecture/knowledge-integration.md
+    deviationsFile: docs/architecture/deviations.md
+    pairedRepository: g2rain/g2rain-knowledge-app
+    note: 已发布且现有能力可私有部署；架构采用按项目 planned 登记，验证及可靠性延期见责任项目，不以产品发布替代架构审核
+
+  - repository: g2rain/g2rain-knowledge-app
+    profile: frontend-app
+    baselineVersion: 1.0.0-draft
+    baselineRef: feature/g2rain-architectur-init
+    adoptionStatus: pilot
+    currentVersion: 1.0.0
+    releaseTag: v1.0.0
+    releaseUrl: https://github.com/g2rain/g2rain-knowledge-app/releases/tag/v1.0.0
+    releaseCheckedAt: "2026-10-31"
+    productStatus: released
+    deploymentStatus: available
+    centralDocument: docs/architecture/knowledge-integration.md
+    deviationsFile: docs/architecture/deviations.md
+    pairedRepository: g2rain/g2rain-knowledge
+    note: 已发布且现有运营能力可私有部署；独立运行仍依赖平台服务，frontend-app 试点状态不因应用发布自动升级
