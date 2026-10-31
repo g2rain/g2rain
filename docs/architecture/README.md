@@ -2,7 +2,7 @@
 
 本目录是 g2rain 多仓库项目的组织级架构事实来源，用于让同类型项目共享稳定、可版本化的架构规则。
 
-跨仓库方案评估见 [知识服务集成设计与闭环评估](knowledge-service-integration-design.md)；知识领域的详细设计仍由 `g2rain-knowledge` 仓库维护。
+跨仓库方案评估见 [知识服务与智能体集成](knowledge-integration.md)；知识领域的详细设计仍由 `g2rain-knowledge` 仓库维护。
 
 ## 核心模型
 
@@ -26,7 +26,7 @@ Agent 根据 Profile、项目文档和 Git Diff 审核
 | --- | --- | --- |
 | [java-domain-service](profiles/java-domain-service/README.md) | `1.0.0`（正式） | `g2rain-member` 已接入，`g2rain-department`、`g2rain-basis` 与 `g2rain-infra` 计划接入 |
 | [frontend-app](profiles/frontend-app/README.md) | `1.0.0`（正式） | 模板与 Manager App 已完成首轮验证，项目按迁移流程显式接入 |
-| [frontend-shell](profiles/frontend-shell/README.md) | `1.0.0`（正式） | `g2rain-main-shell` 已采用；继承 frontend-app 通用规则，并以 [Main Shell 契约](profiles/frontend-shell/main-shell-contract.md) 治理主应用不变式；双模式兼容升级见 [application-code-compatibility.md](profiles/frontend-shell/application-code-compatibility.md) |
+| [frontend-shell](profiles/frontend-shell/README.md) | `1.0.0`（正式） | `g2rain-main-shell` 已采用；继承 frontend-app 通用规则，并以 [Main Shell 契约](profiles/frontend-shell/main-shell-contract.md) 治理主应用不变式；双模式兼容升级见 [main-shell-contract.md#存量应用兼容与迁移](profiles/frontend-shell/main-shell-contract.md#存量应用兼容与迁移) |
 | [gateway-service](profiles/gateway-service/README.md) | `1.0.0-draft`（试点） | WebFlux 为首个试点，后续由 WebMVC 验证共享契约与实现差异 |
 
 后续可增加 `java-platform-service`、`java-library`、`spring-boot-starter` 和 `security-service`，不能把领域服务、Gateway 或前端规则强加给不适用的仓库。
@@ -37,7 +37,7 @@ Agent 根据 Profile、项目文档和 Git Diff 审核
 
 | 共享库 | 状态 | 中央职责 |
 | --- | --- | --- |
-| [g2rain-appkit](platform-libraries/g2rain-appkit.md) | Supporting Library，库内实现已完成，Member 整体验证中，尚未发布 | 维护主题、UI、HTTP、Platform 公共包的职责边界、依赖方向及跨仓库版本契约 |
+| [g2rain-appkit](platform-libraries/g2rain-appkit.md) | Supporting Library，v1.0.1 已发布 | 维护主题、UI、HTTP、Platform 公共包的职责边界、依赖方向及跨仓库版本契约 |
 
 `g2rain-appkit` 与 `g2rain-common`、`g2rain-spring-boot-starter` 的平台角色相同，都是 Supporting Library；三者的实现技术、制品和消费契约不同。后端共享库已补齐版本登记，见[共享库目录](platform-libraries/README.md)与[2026-10-30 后端工具链发布](../releases/backend-ecosystem-v2026.10.30.md)。
 
@@ -45,7 +45,7 @@ Agent 根据 Profile、项目文档和 Git Diff 审核
 
 | 工具 | 状态 | 中央职责 |
 | --- | --- | --- |
-| [g2rain-app-cli](platform-tools/g2rain-app-cli.md) | 官方唯一前端项目脚手架，正式兼容组合待发布 | 维护其平台定位以及 CLI、模板、生成 App 与 `frontend-app` Profile 的关系 |
+| [g2rain-app-cli](platform-tools/g2rain-app-cli.md) | 官方唯一前端项目脚手架，v1.0.1 已发布 | 维护其平台定位以及 CLI、模板、生成 App 与 `frontend-app` Profile 的关系 |
 | [g2rain-crafter](platform-tools/g2rain-crafter.md) | 官方唯一后端项目与代码生成 Maven 插件；v1.0.9 已发布（原测试记录见登记） | 维护 Crafter、底层 Generator、模板、生成服务与 `java-domain-service` 的关系 |
 | [g2rain-generator-maven-plugin](platform-tools/g2rain-generator-maven-plugin.md) | 官方唯一后端数据库代码生成引擎；v1.0.8 已发布（原测试记录见登记） | 维护表元数据、模板、生成代码、Crafter 与 `java-domain-service` 的关系 |
 

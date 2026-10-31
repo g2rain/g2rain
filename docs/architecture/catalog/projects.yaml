@@ -65,6 +65,10 @@ projects:
     note: 已完成 README、项目文档、元数据、链接和 Maven 构建；测试、字典唯一键、数据库与事件一致性、开发凭据、写接口授权及 codegen 残留差异关闭后再转为 adopted
 
   - repository: g2rain/g2rain-app-template
+    currentVersion: 1.0.1
+    releaseTag: v1.0.1
+    releaseUrl: https://github.com/g2rain/g2rain-app-template/releases/tag/v1.0.1
+    releaseCheckedAt: "2026-10-31"
     profile: frontend-app
     baselineVersion: 1.0.0-draft
     adoptionStatus: upgrade-required
@@ -76,6 +80,10 @@ projects:
     deviationsFile: docs/architecture/deviations.md
 
   - repository: g2rain/g2rain-app-cli
+    currentVersion: 1.0.1
+    releaseTag: v1.0.1
+    releaseUrl: https://github.com/g2rain/g2rain-app-cli/releases/tag/v1.0.1
+    releaseCheckedAt: "2026-10-31"
     profile: null
     architectureType: frontend-tooling-cli
     adoptionStatus: supporting-tool
@@ -97,6 +105,10 @@ projects:
     note: 项目已建立 AGENTS.md、docs/project.yaml 和专题文档；浏览器、main-shell、IAM 与 Gateway 集成仍按项目发布流程验证
 
   - repository: g2rain/g2rain-appkit
+    currentVersion: 1.0.1
+    releaseTag: v1.0.1
+    releaseUrl: https://github.com/g2rain/g2rain-appkit/releases/tag/v1.0.1
+    releaseCheckedAt: "2026-10-31"
     profile: null
     family: platform-shared-library
     architectureType: platform-shared-library
@@ -119,7 +131,7 @@ projects:
     documentationStatus: central-and-project-documented
     validationStatus: pilot-integration-in-progress
     reviewedAt: "2026-09-19"
-    note: 与 g2rain-common、g2rain-spring-boot-starter 同为 Supporting Library；Theme、UI、HTTP 与 Platform 首版已通过库内验证，当前以 g2rain-member-app 验证独立运行、qiankun 集成与 Main/Sub 协作。验证期间仅使用 npm pack 制品，整体验证通过后才发布任何 npm 包。
+    note: 四个公共包 v1.0.1 已发布；上方 validationStatus 与 reviewedAt 为早期试点记录，不作为当前版本整体验收结论。
 
   - repository: g2rain/g2rain-main-shell
     profile: frontend-shell
@@ -148,22 +160,6 @@ projects:
     testsRun: 47
     reviewedAt: "2026-08-26"
     note: IAM 是持续运行的统一认证、授权与 Token 服务，不是研发工具或普通领域服务；mvn test 通过，外部 IdP 与跨服务联调仍按发布流程执行
-
-  - repository: g2rain/g2rain-federation-forwarder
-    profile: null
-    architectureType: federation-forwarder
-    adoptionStatus: planned
-    centralDecision: docs/architecture/decisions/0008-federation-forwarder.md
-    documentationStatus: initialized
-    note: 私有部署环境的通用联邦转发服务；私有持有本地机构绑定、机构 Client DPoP 与加密 Token，云端 IAM/Basis 仍为授权主数据；尚未实现或联调
-
-  - repository: g2rain/g2rain-federation-auth-app
-    profile: null
-    architectureType: federation-auth-app
-    adoptionStatus: planned
-    centralDecision: docs/architecture/decisions/0008-federation-forwarder.md
-    documentationStatus: initialized
-    note: 私有部署环境的联邦管理员授权页面；仅获取 clientId、跳转云端授权并回交授权码，不保存凭据；尚未实现或联调
 
   - repository: g2rain/g2rain-gateway-webflux
     profile: gateway-service

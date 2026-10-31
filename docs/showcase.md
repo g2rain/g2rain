@@ -2,6 +2,15 @@
 
 **让业务知识进入对话，让处理过程有迹可循。** 从入门指南、内部操作手册到客服知识，下面的界面展示了G2rain（谷雨）开源智能体平台的知识管理、对话问答与执行追踪场景。
 
+## 在线演示
+
+- [知识对话演示](https://demo.g2rain.com/chat/?entry=ek_xV3IEOTK8HfexoR3PupYcF)：体验知识对话入口，无需登录。
+- [主应用演示](https://demo.g2rain.com/main/)：体验平台主应用入口，用户名和密码均为 `admin`。
+
+接入交流请[联系维护者](https://www.g2rain.com/platform/contact.html)。
+
+智能体平台与智能客服已开发完成，待正式开放。以下截图展示具体交互。
+
 ### 用自然语言，找到业务问题的答案
 
 用户围绕账号创建、账号使用方式连续提问，回答中显示《谷雨平台入门指南 v1》作为参考，方便进一步核对知识来源。
@@ -26,7 +35,7 @@
 
 </details>
 
-以上为项目维护者提供的界面截图，展示可见交互；各图为独立示例，不代表同一次请求或全部场景的验收结果。架构与验收要求见[集成设计](architecture/knowledge-service-integration-design.md)。
+以上为项目维护者提供的界面截图，展示可见交互；各图为独立示例，不代表同一次请求或全部场景的验收结果。架构与验收要求见[集成设计](architecture/knowledge-integration.md)。
 
 **想了解你的业务场景如何接入？** 欢迎通过[项目邮箱](mailto:g2rain_developer@163.com)交流，或在 [Discussions](https://github.com/g2rain/g2rain/discussions)分享需求。也可以先[探索知识库](overview.md#知识库)与[Agent 能力](overview.md#agent-能力)。
 

@@ -1,0 +1,26 @@
+# G2rain（谷雨）开源智能体平台
+
+> 面向企业的开源智能体平台，连接模型、知识与业务工具，以 SaaS基座和应用开发工具链支撑智能应用落地。
+
+## 当前状态（2026-10-31）
+
+私有部署场景已具备可用性：基础搭建、SaaS基座现有能力、知识库已可用，可在企业环境开发、部署和使用业务应用。智能体平台与智能客服已开发完成，待开放。云端商业运营中的交易开通、订阅、计量计费和账单等能力处于规划设计中，不是私有部署的前置条件。已开放模块统一采用标准 Apache-2.0。
+
+## 项目资料
+
+- [项目介绍与引用资料](docs/project-introduction.md): 介绍文案、适用场景、能力状态、平台范围和引用依据。
+- [平台概览](docs/overview.md): 能力与项目关系。
+- [路线图](docs/roadmap.md): 当前进展和后续目标。
+- [开发与部署](docs/getting-started.md): 开始使用。
+- [开源协议](docs/licenses.md): 模块协议入口与适用范围。
+- [知识与智能体集成](docs/architecture/knowledge-integration.md): 服务职责、接入边界与验证清单。
+- [文档导航](docs/index.md): 全部资料入口。
+
+## 演示与交流
+
+- [知识对话演示](https://demo.g2rain.com/chat/?entry=ek_xV3IEOTK8HfexoR3PupYcF): 无需登录。
+- [主应用演示](https://demo.g2rain.com/main/): 演示用户名和密码均为 admin。
+- [联系维护者](https://www.g2rain.com/platform/contact.html): 接入交流。
+- [主仓库](https://github.com/g2rain/g2rain): 平台导航、文档和社区入口。
+
+演示开放、源码开放和开发完成分别说明。历史架构评估和旧测试记录不替代当前能力状态。应用实现位于各责任仓库，本仓库维护平台介绍与治理。本文为资料索引，不保证外部助手自动收录或引用。

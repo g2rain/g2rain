@@ -7,9 +7,10 @@
 | 仓库 | [g2rain/g2rain-app-cli](https://github.com/g2rain/g2rain-app-cli) |
 | 架构类型 | `frontend-tooling-cli` |
 | 平台身份 | g2rain 官方唯一前端项目脚手架 |
-| 当前状态 | Supporting Tool，适配 `frontend-app 1.0.0`，正式兼容组合待发布 |
-| 当前 CLI 版本 | `0.1.0` |
-| 关联模板 | [g2rain/g2rain-app-template](https://github.com/g2rain/g2rain-app-template) |
+| 当前状态 | Supporting Tool，v1.0.1 已发布 |
+| 当前 CLI 版本 | `1.0.1` |
+| 发布入口 | [v1.0.1](https://github.com/g2rain/g2rain-app-cli/releases/tag/v1.0.1) |
+| 关联模板 | [App Template](https://github.com/g2rain/g2rain-app-template) · [Shell Template](https://github.com/g2rain/g2rain-shell-template) |
 | 关联 Profile | [`frontend-app 1.0.0`](../profiles/frontend-app/README.md) |
 | 跨仓库契约 | [项目脚手架与模板契约](../profiles/frontend-app/scaffolding-policy.md) |
 
@@ -57,7 +58,7 @@ CLI npm 版本、模板 Git Ref 和 Profile 版本是三个独立维度。正式
 
 | CLI 版本 | 模板 Ref | Profile 版本 | 状态 |
 | --- | --- | --- | --- |
-| `0.1.0` | 当前尚未固定 | `1.0.0` | Profile 已正式；模板 Ref 未固定，因此仍不构成可复现的正式组合 |
+| `1.0.1` | App Template / Shell Template `v1.0.1` | App / Shell `1.0.0`；生成项目按声明采用 | 已发布；模板为 CLI 包内固定快照，Appkit 为 `1.0.1` |
 
 正式组合不得让已发布 CLI 静默跟随模板默认分支。生成项目应记录 CLI 版本、模板来源与 Ref、Profile 版本，并生成正确的项目身份文档。
 
