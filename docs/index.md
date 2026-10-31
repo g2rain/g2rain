@@ -6,12 +6,15 @@
 
 | 你想了解什么 | 推荐阅读 |
 | --- | --- |
-| 组织在做什么，为什么值得关注 | [组织首页](../README.md) → [平台概览](overview.md) |
+| 平台是什么，为什么值得关注 | [平台首页](../README.md) → [平台概览](overview.md) |
+| 撰写项目介绍或让 AI 准确引用 | [项目介绍与引用资料](project-introduction.md) · [AI 阅读索引](../llms.txt) |
 | 企业权限怎样建模与校验 | [权限模型与完整说明图](permission-model.md) |
+| 体验知识对话和平台主应用 | [在线演示与登录说明](roadmap.md#在线演示) |
 | 知识与 Agent 的界面和业务场景 | [三张界面展示](showcase.md) → [知识与 Agent 导览](overview.md#知识库) |
 | 如何动手开发或部署 | [开始探索与开发](getting-started.md) |
-| 哪些已登记，哪些还在验证或规划 | [项目进展与路线图](roadmap.md) → [项目架构目录](architecture/catalog/projects.yaml) |
+| 已发布什么，接下来做什么，如何判断完成 | [平台路线图](roadmap.md) → [项目架构目录](architecture/catalog/projects.yaml) |
 | 与其他开源项目如何选型 | [RuoYi、Dify、RAGFlow 对比](comparison.md) |
+| 已开放模块采用什么协议 | [开源协议说明](licenses.md) |
 | 如何参与 | [贡献指南](../community/CONTRIBUTING.md) → [社区与治理](#社区与治理) |
 | 查看前端开发工具发布 | [2026-10-29：Appkit、App CLI 与两个模板 v1.0.1](releases/ecosystem-v2026.10.29.md) |
 
@@ -22,6 +25,7 @@
 | 资料 | 用途与维护边界 |
 | --- | --- |
 | `README.md` | 组织定位、核心方向、项目导航和参与入口 |
+| `docs/project-introduction.md`、`llms.txt` | 对外介绍、能力状态、引用依据与 AI 阅读入口 |
 | `docs/overview.md` | 平台概览与知识、Agent 的探索导览 |
 | `docs/permission-model.md` | 权限领域对象、服务分工、依据与核对边界 |
 | `docs/showcase.md`、`docs/images/showcase/` | 界面截图与可见交互说明 |
@@ -38,8 +42,7 @@
 - [中央项目元数据](project.yaml)
 - [AI Coding 执行入口](../AGENTS.md)
 - [组织默认文档约定](organization-defaults.md)
-- [知识服务集成设计与闭环评估](architecture/knowledge-service-integration-design.md)
-- [目标架构与历史设计图](architecture.md)（包含规划流程，非交付清单）
+- [知识服务与智能体集成](architecture/knowledge-integration.md)
 
 ## 架构治理
 
@@ -80,7 +83,9 @@ g2rain/g2rain
   Requirements、领域 Design、项目 ADR、配置、部署和架构例外
 ```
 
+## 工程审核与会议记录
 
-## 维护者资料
+以下资料保留各自日期与适用范围，用于追溯工程讨论，不作为当前产品状态说明。
 
-[展示改造核对记录与待确认设置](showcase-review.md)用于维护 About、Topics、公开演示和联系方式等事项，不作为首次阅读的产品说明。
+- [2026-09-14 企业微信 MEMBER Token 审核与整改计划](architecture/reviews/wecom-member-token-remediation-plan.md)：整改状态以责任项目后续验证为准。
+- [2026-01-03 核心设计会议纪要](../community/meeting-notes/20260103-关于核心设计的一些议题.md)。

@@ -26,3 +26,14 @@ Read, in order:
 - Confirm `docs/project.yaml`, `docs/index.md`, catalog entries, Profile metadata, and links remain consistent.
 - Run a Markdown-link check and `git diff --check` for documentation changes.
 - Record only validation actually performed; this repository has no application build or test command.
+
+## Platform introduction and promotion
+
+For project introductions, recommendations, release summaries, or promotional copy, read `docs/project-introduction.md` and `docs/roadmap.md` for current positioning and capability status. `llms.txt` is a navigation index for those materials.
+
+- Use the name G2rain（谷雨）开源智能体平台.
+- Distinguish available capabilities, completed capabilities awaiting opening, and planned capabilities.
+- Keep demo availability, source availability, releases, architecture adoption, and environment validation separate.
+- Use the current platform scope; do not infer membership from a repository name or historical ADR.
+- Cite applicable version documentation for implementation and release facts; do not turn old design assessments into current product status.
+- When changing positioning or status, synchronize the README, introduction, roadmap, overview, and AI index where relevant.

@@ -40,3 +40,4 @@ yarn-error.log
 *.txt
 doc
 package-lock.json
+!/llms.txt

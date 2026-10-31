@@ -17,7 +17,7 @@
 
 | 共享库 | 状态 | 实现类型 | 主要消费者 |
 | --- | --- | --- | --- |
-| [g2rain-appkit](g2rain-appkit.md) | Supporting Library，库内实现已完成，Member 整体验证中，尚未发布 | npm workspace 公共包 | 前端 App、Main Shell、App Template |
+| [g2rain-appkit](g2rain-appkit.md) | Supporting Library，v1.0.1 已发布 | npm workspace 公共包 | 前端 App、Main Shell、App Template |
 | [g2rain-common](g2rain-common.md) | v1.0.9 已发布 | Java / Maven | 后端服务与研发工具 |
 | [g2rain-mybatis-extensions](g2rain-mybatis-extensions.md) | v1.0.5 已发布 | Java / Maven | 后端服务与研发工具 |
 | [g2rain-spring-boot-starter](g2rain-spring-boot-starter.md) | v1.0.6 已发布 | Java / Maven | 后端服务与研发工具 |

@@ -129,7 +129,7 @@
 
 - 不建议在公开 Issue 中直接披露未修复的严重安全漏洞。
 - 建议通过以下方式报告：
-  - 专用安全邮箱（如 `g2rain_developer@163.com`，需实际配置）
+  - 维护者邮箱：[g2rain_developer@163.com](mailto:g2rain_developer@163.com)，流程见[安全披露说明](security.md)
 
 处理流程：
 
