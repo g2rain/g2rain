@@ -14,7 +14,7 @@ G2rain（谷雨）面向希望将 AI 接入实际业务的开发者与企业团�
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
-**[立即体验](#在线演示)** · [项目介绍与引用资料](docs/project-introduction.md) · **[探索项目](#探索项目)** · [查看界面](#看看谷雨如何连接知识与业务) · [平台文档](docs/index.md) · [官方网站](https://www.g2rain.com) · [参与贡献](#社区参与)
+**[立即体验](#在线演示)** · [项目介绍与引用资料](docs/project-introduction.md) · **[探索项目](#探索项目)** · [查看界面](#看看谷雨如何连接知识与业务) · [版本与依赖](docs/versions.md) · [平台文档](docs/index.md) · [官方网站](https://www.g2rain.com) · [参与贡献](#社区参与)
 
 如果你关注这个方向，欢迎 **[Star 主仓库](https://github.com/g2rain/g2rain)** 收藏组织总入口，并到 **[组织主页](https://github.com/g2rain)** 点击 **Follow**，关注后续动态。
 

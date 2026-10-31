@@ -68,7 +68,7 @@ IAM 持续运行并对外提供安全协议，因此不归入 `platform-tools`�
 
 `frontend-app 1.0.0` 于 `2026-08-25` 转为正式版本，目标固定引用为 `architecture-v1.1.0`。模板和真实业务 App 的生产构建已经通过；各项目及脚手架兼容组合仍按迁移与发布流程显式升级，不能因 Profile 正式发布而自动改写项目声明。
 
-`frontend-shell 1.0.0` 于 `2026-08-26` 转为正式版本，固定引用为 `architecture-v1.2.0`。当前只有 `g2rain-main-shell` 一个实现，因此以其项目文档、元数据、链接检查和生产构建作为首发验证依据；后续跨应用协议变更仍须补充真实子应用浏览器联调。
+`frontend-shell 1.0.0` 于 `2026-08-26` 转为正式版本，固定引用为 `architecture-v1.2.0`。首次发布时以 `g2rain-main-shell` 的项目文档、元数据、链接检查和生产构建作为验证依据；后续已有 Admin Shell 与 Shell Template，后续跨应用协议变更仍须补充真实子应用浏览器联调。
 
 `gateway-service 1.0.0-draft` 以 `g2rain-gateway-webflux` 为首个试点，后续由 `g2rain-gateway-webmvc` 验证共享入口契约。当前固定到 `feature/g2rain-architectur-init`，目标正式快照为 `architecture-v1.3.0`。WebFlux 的 121 项 Maven 测试已通过；开发默认凭据、敏感请求日志、覆盖率采集、关键安全负向测试、真实基础设施联调及 WebMVC 差异审核仍是转正式阻断项。
 
