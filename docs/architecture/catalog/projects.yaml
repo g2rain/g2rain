@@ -291,3 +291,39 @@ projects:
     deviationsFile: docs/architecture/deviations.md
     pairedRepository: g2rain/g2rain-knowledge
     note: 已发布且现有运营能力可私有部署；独立运行仍依赖平台服务，frontend-app 试点状态不因应用发布自动升级
+
+  - repository: g2rain/g2rain-chat-shell
+    architectureType: agent-chat-shell
+    adoptionStatus: planned
+    platformRole: agent-knowledge-chat-entry
+    note: 2026-11-03 发布说明宣布开源，提供知识对话入口并承载导航、会话协调与微前端应用；architectureType / platformRole 为按发布说明的初步归类，待按架构治理流程完成 Profile 登记与基线审核
+
+  - repository: g2rain/g2rain-agent-app
+    architectureType: agent-console-app
+    adoptionStatus: planned
+    platformRole: agent-operation-console
+    note: 2026-11-03 发布说明宣布开源，运营控制台用于管理 Agent、Skill、模型与 MCP 工具并查看会话和执行追踪；初步归类待治理审核补全
+
+  - repository: g2rain/g2rain-agent-studio
+    architectureType: agent-studio
+    adoptionStatus: planned
+    platformRole: agent-profile-and-skill-config
+    note: 2026-11-03 发布说明宣布开源，维护 Agent 画像、Skill 执行契约及能力绑定并向运行时提供可装载能力包；初步归类待治理审核补全
+
+  - repository: g2rain/g2rain-agent-runtime
+    architectureType: agent-runtime
+    adoptionStatus: planned
+    platformRole: agent-execution-and-tracing
+    note: 2026-11-03 发布说明宣布开源，协调模型与工具调用，维护任务图、检查点与恢复记录并通过 SSE 返回进度；初步归类待治理审核补全
+
+  - repository: g2rain/g2rain-model-nexus
+    architectureType: model-nexus
+    adoptionStatus: planned
+    platformRole: model-catalog-and-routing
+    note: 2026-11-03 发布说明宣布开源，统一模型目录、接入资料与用量记录，通过 OpenAI 风格接口路由聊天与 Embeddings 请求；初步归类待治理审核补全
+
+  - repository: g2rain/g2rain-mcp-registry
+    architectureType: mcp-registry
+    adoptionStatus: planned
+    platformRole: tool-catalog-and-mcp-proxy
+    note: 2026-11-03 发布说明宣布开源，管理工具目录与输入 schema，通过 MCP 提供工具发现、调用代理与必要的主体上下文转发；初步归类待治理审核补全

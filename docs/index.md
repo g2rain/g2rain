@@ -69,6 +69,13 @@
 - [项目架构目录](architecture/catalog/projects.yaml)
 - [架构迁移流程](architecture/migrations/README.md)
 - [架构治理机制](../governance/architecture-governance.md)
+- [智能体核心六仓（2026-11-03 发布）](releases/agent-core-v2026.11.03.md)
+  - [g2rain-chat-shell](https://github.com/g2rain/g2rain-chat-shell)
+  - [g2rain-agent-app](https://github.com/g2rain/g2rain-agent-app)
+  - [g2rain-agent-studio](https://github.com/g2rain/g2rain-agent-studio)
+  - [g2rain-agent-runtime](https://github.com/g2rain/g2rain-agent-runtime)
+  - [g2rain-model-nexus](https://github.com/g2rain/g2rain-model-nexus)
+  - [g2rain-mcp-registry](https://github.com/g2rain/g2rain-mcp-registry)
 
 ## 社区与治理
 
