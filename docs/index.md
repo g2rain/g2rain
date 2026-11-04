@@ -4,6 +4,8 @@
 
 ## 按阅读目标开始
 
+[G2rain v1.0.0 完整发布说明：23 个业务组件联合发布](releases/v1.0.0.md)
+
 | 你想了解什么 | 推荐阅读 |
 | --- | --- |
 | 平台是什么，为什么值得关注 | [平台首页](../README.md) → [平台概览](overview.md) |
@@ -53,7 +55,7 @@
 - [Java 领域服务 Profile](architecture/profiles/java-domain-service/README.md)
 - [前端 App Profile](architecture/profiles/frontend-app/README.md)
 - [前端 Shell Profile](architecture/profiles/frontend-shell/README.md)
-- [Gateway Service Profile（Draft）](architecture/profiles/gateway-service/README.md)
+- [Gateway Service Profile（开发完成）](architecture/profiles/gateway-service/README.md)
 - [平台唯一服务目录](architecture/platform-services/README.md)
 - [g2rain-iam 平台服务登记](architecture/platform-services/g2rain-iam.md)
 - [g2rain-common 版本登记](architecture/platform-libraries/g2rain-common.md)
@@ -93,3 +95,7 @@ g2rain/g2rain
 
 - [2026-09-14 企业微信 MEMBER Token 审核与整改计划](architecture/reviews/wecom-member-token-remediation-plan.md)：整改状态以责任项目后续验证为准。
 - [2026-01-03 核心设计会议纪要](../community/meeting-notes/20260103-关于核心设计的一些议题.md)。
+
+## 业务模块发布目录
+
+业务服务、业务前端、主壳与 Agent 核心模块均已发布，逐模块版本、交付范围及发布说明见[2026-11-04 业务模块发布目录](releases/business-modules-v2026.11.04.md)。

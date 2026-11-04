@@ -39,13 +39,17 @@
    在 GitHub 上 Fork 目标仓库（例如 `g2rain-main-shell`），并 Clone 到本地。
 
 2. **创建分支**  
-   建议从 `main` 或对应的开发分支拉一个新分支：
+   从上游仓库最新的 `develop` 创建工作分支。以下以 `g2rain-agent-runtime` 为例，请替换为你实际贡献的仓库和 GitHub 用户名：
 
    ```bash
-   git checkout -b feat/xxx
-   # 或
-   git checkout -b fix/issue-123
+   git clone https://github.com/YOUR_USERNAME/g2rain-agent-runtime.git
+   cd g2rain-agent-runtime
+   git remote add upstream https://github.com/g2rain/g2rain-agent-runtime.git
+   git fetch upstream
+   git switch -c fix/issue-123 upstream/develop
    ```
+
+   新功能可使用 `feature/xxx`，文档修改可使用 `docs/xxx`。一个分支聚焦一个问题；如果目标仓库没有 `develop`，先通过 Issue 联系维护者确认接入分支。
 
 3. **按目标仓库执行验证**
    本中央仓库仅维护文档，没有应用构建、启动或测试命令。文档变更需检查 Markdown 链接，并执行 `git diff --check`。子项目的依赖安装、构建和测试请遵循目标仓库 README 与 AGENTS.md，不要默认所有项目都使用 npm。
@@ -59,13 +63,36 @@
    - 确保现有测试都能通过。
 
 6. **提交 PR**  
-   - 填写清晰的标题和描述。
-   - 链接相关 Issue（例如：`Close #123`）。
-   - 说明改动动机、设计思路以及可能的影响范围。
+   将工作分支推送到自己的 Fork：
+
+   ```bash
+   git add path/to/changed-file
+   git commit -m "fix: 修复问题的简要说明"
+   git push -u origin fix/issue-123
+   ```
+
+   在 GitHub 点击 **Compare & pull request**，确认目标为 **`g2rain/目标仓库` 的 `develop` 分支**，来源为 **你的 Fork 的工作分支**。代码改动提交到对应组件仓库；平台文档与治理改动提交到 `g2rain/g2rain`。
+
+   PR 描述请包含：
+
+   - **问题与关联 Issue**：发生条件、期望结果和实际结果，可写 `Refs #123`。
+   - **改动内容**：实现方式、影响的模块与接口，以及兼容性影响。
+   - **验证结果**：实际执行的命令、测试结果及必要的截图；未完成的验证说明原因。
+   - **部署与迁移**：是否涉及数据库、配置、依赖版本或跨仓库配套，如何升级和回滚；不涉及时注明。
+   - **文档与示例**：说明同步更新的使用说明或示例入口。
+
+   尚在开发或希望提前讨论的改动可以创建 Draft PR，完成后再标记 Ready for review。提交前检查 diff，移除本地配置、凭据、构建产物和无关格式变更。
 
 7. **Review 与修改**  
    Maintainer 或 Committer 会进行 Review，并可能提出修改建议。  
-   请根据反馈更新 PR，直到达成共识。
+   请根据反馈在原工作分支继续提交并推送，更新同一个 PR。需要同步上游时，获取最新 `upstream/develop` 并解决冲突，再执行相关验证。
+
+   **贡献 PR 先合入 `develop`，由维护者完成测试环境验证及必要的跨组件联调后，再统一合并进入 `main`。** `main` 用于维护已验证的稳定内容；贡献者无需另行向 `main` 提交相同 PR。版本标签及正式发布由维护者按发布流程处理。
+
+   ```text
+   Fork 工作分支 → PR 到上游 develop → Review 与修改
+   → 合入 develop → 维护者验证 → 合入 main → 按计划发布
+   ```
 
 ---
 

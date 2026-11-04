@@ -1,5 +1,9 @@
 schemaVersion: 2
 
+# completed 表示维护者确认开发完成；历史验证记录和固定快照发布分别维护。
+statusUpdatedAt: "2026-11-04"
+statusSource: maintainer-confirmed
+
 profiles:
   - id: java-domain-service
     version: 1.0.0
@@ -19,12 +23,12 @@ profiles:
     baseProfile: frontend-app
     baseProfileVersion: 1.0.0
   - id: gateway-service
-    version: 1.0.0-draft
-    status: draft
+    version: 1.0.0
+    status: completed
     baselineRef: feature/g2rain-architectur-init
     targetBaselineRef: architecture-v1.3.0
-    pilotImplementation: g2rain/g2rain-gateway-webflux
-    plannedImplementation: g2rain/g2rain-gateway-webmvc
+    completedImplementation: g2rain/g2rain-gateway-webflux
+    completedAlternativeImplementation: g2rain/g2rain-gateway-webmvc
 
 projects:
   - repository: g2rain/g2rain-member
@@ -36,43 +40,43 @@ projects:
 
   - repository: g2rain/g2rain-department
     profile: java-domain-service
-    baselineVersion: null
-    adoptionStatus: planned
-    note: 接入前需根据当前源码和 POM 完成差异审核
+    baselineVersion: 1.0.0
+    adoptionStatus: completed
+    note: 维护者于 2026-11-04 确认开发完成；历史构建、测试和偏差记录保留各自日期，后续环境验证按责任项目维护。
 
   - repository: g2rain/g2rain-basis
     profile: java-domain-service
-    baselineVersion: null
-    adoptionStatus: planned
+    baselineVersion: 1.0.0
+    adoptionStatus: completed
     targetBaselineVersion: 1.0.0
     targetBaselineRef: architecture-v1.0.0
     validationStatus: test-passed
     testsRun: 64
     reviewedAt: "2026-09-03"
     deviationsFile: docs/architecture/deviations.md
-    note: 已完成项目文档、元数据、链接和 Maven 验证；同步写契约、跨服务一致性、逻辑删除唯一键、开发凭证与集成测试差异关闭后再转为 adopted
+    note: 维护者于 2026-11-04 确认开发完成；历史构建、测试和偏差记录保留各自日期，后续环境验证按责任项目维护。
 
   - repository: g2rain/g2rain-infra
     profile: java-domain-service
-    baselineVersion: null
-    adoptionStatus: planned
+    baselineVersion: 1.0.0
+    adoptionStatus: completed
     targetBaselineVersion: 1.0.0
     targetBaselineRef: architecture-v1.0.0
     validationStatus: build-passed
     testsRun: 0
     reviewedAt: "2026-09-04"
     deviationsFile: docs/architecture/deviations.md
-    note: 已完成 README、项目文档、元数据、链接和 Maven 构建；测试、字典唯一键、数据库与事件一致性、开发凭据、写接口授权及 codegen 残留差异关闭后再转为 adopted
+    note: 维护者于 2026-11-04 确认开发完成；历史构建、测试和偏差记录保留各自日期，后续环境验证按责任项目维护。
 
   - repository: g2rain/g2rain-app-template
-    currentVersion: 1.0.1
-    releaseTag: v1.0.1
-    releaseUrl: https://github.com/g2rain/g2rain-app-template/releases/tag/v1.0.1
+    currentVersion: 1.0.2
+    releaseTag: v1.0.2
+    releaseUrl: https://github.com/g2rain/g2rain-app-template/releases/tag/v1.0.2
     releaseCheckedAt: "2026-10-31"
     profile: frontend-app
-    baselineVersion: 1.0.0-draft
-    adoptionStatus: upgrade-required
-    baselineRef: feature/g2rain-architectur-init
+    baselineVersion: 1.0.0
+    adoptionStatus: adopted
+    baselineRef: v1.0.2
     targetBaselineVersion: 1.0.0
     targetBaselineRef: architecture-v1.1.0
     validationStatus: build-passed
@@ -129,7 +133,8 @@ projects:
       - "@g2rain/http"
       - "@g2rain/platform"
     documentationStatus: central-and-project-documented
-    validationStatus: pilot-integration-in-progress
+    developmentStatus: completed
+    validationStatus: historical-pilot-record
     reviewedAt: "2026-09-19"
     note: 四个公共包 v1.0.1 已发布；上方 validationStatus 与 reviewedAt 为早期试点记录，不作为当前版本整体验收结论。
 
@@ -164,8 +169,8 @@ projects:
   - repository: g2rain/g2rain-gateway-webflux
     profile: gateway-service
     implementationType: webflux
-    baselineVersion: 1.0.0-draft
-    adoptionStatus: pilot
+    baselineVersion: 1.0.0
+    adoptionStatus: completed
     baselineRef: feature/g2rain-architectur-init
     targetBaselineVersion: 1.0.0
     targetBaselineRef: architecture-v1.3.0
@@ -173,16 +178,16 @@ projects:
     testsRun: 121
     reviewedAt: "2026-09-06"
     deviationsFile: docs/architecture/deviations.md
-    note: Gateway Service 首个 WebFlux 试点；项目文档、元数据和 Maven 测试已通过，开发默认凭据、敏感请求日志、JaCoCo、关键安全负向测试及真实集成完成后再转为 adopted
+    note: 维护者于 2026-11-04 确认开发完成；历史构建、测试和偏差记录保留各自日期，后续环境验证按责任项目维护。
 
   - repository: g2rain/g2rain-gateway-webmvc
     profile: gateway-service
     implementationType: webmvc
-    baselineVersion: null
-    adoptionStatus: planned
-    targetBaselineVersion: 1.0.0-draft
+    baselineVersion: 1.0.0
+    adoptionStatus: completed
+    targetBaselineVersion: 1.0.0
     targetBaselineRef: feature/g2rain-architectur-init
-    note: 项目文档和元数据已建立；远端仍声明 planned，2026-09-06 验证因 g2rain-infra-api:1.0.0 依赖解析失败而未执行测试，试点推进需完成依赖与共享契约验证
+    note: 维护者于 2026-11-04 确认开发完成；历史构建、测试和偏差记录保留各自日期，后续环境验证按责任项目维护。
 
   - repository: g2rain/g2rain-crafter
     profile: null
@@ -263,7 +268,7 @@ projects:
     architectureType: knowledge-retrieval-service
     baselineVersion: 1.0.0
     baselineRef: architecture-v1.0.0
-    adoptionStatus: planned
+    adoptionStatus: completed
     currentVersion: 1.0.0
     releaseTag: v1.0.0
     releaseUrl: https://github.com/g2rain/g2rain-knowledge/releases/tag/v1.0.0
@@ -274,13 +279,13 @@ projects:
     centralDocument: docs/architecture/knowledge-integration.md
     deviationsFile: docs/architecture/deviations.md
     pairedRepository: g2rain/g2rain-knowledge-app
-    note: 已发布且现有能力可私有部署；架构采用按项目 planned 登记，验证及可靠性延期见责任项目，不以产品发布替代架构审核
+    note: 维护者于 2026-11-04 确认开发完成；历史构建、测试和偏差记录保留各自日期，后续环境验证按责任项目维护。
 
   - repository: g2rain/g2rain-knowledge-app
     profile: frontend-app
-    baselineVersion: 1.0.0-draft
+    baselineVersion: 1.0.0
     baselineRef: feature/g2rain-architectur-init
-    adoptionStatus: pilot
+    adoptionStatus: completed
     currentVersion: 1.0.0
     releaseTag: v1.0.0
     releaseUrl: https://github.com/g2rain/g2rain-knowledge-app/releases/tag/v1.0.0
@@ -290,4 +295,4 @@ projects:
     centralDocument: docs/architecture/knowledge-integration.md
     deviationsFile: docs/architecture/deviations.md
     pairedRepository: g2rain/g2rain-knowledge
-    note: 已发布且现有运营能力可私有部署；独立运行仍依赖平台服务，frontend-app 试点状态不因应用发布自动升级
+    note: 维护者于 2026-11-04 确认开发完成；历史构建、测试和偏差记录保留各自日期，后续环境验证按责任项目维护。
