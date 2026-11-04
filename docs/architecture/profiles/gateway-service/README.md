@@ -1,10 +1,10 @@
 # Gateway Service Profile
 
-版本：`1.0.0-draft`　状态：Draft 试点
+版本：`1.0.0`　状态：开发完成（2026-11-04 维护者确认）
 
 该 Profile 适用于 G2rain 的统一入口 Gateway，包括 Spring Cloud Gateway Server WebFlux 与 WebMVC 实现。它治理动态路由、入口认证、请求完整性、API 权限、可信主体透传、响应适配、同步缓存与入口观测。
 
-`g2rain-gateway-webflux` 是首个试点实现，`g2rain-gateway-webmvc` 是计划接入实现。Profile 规定两类网关的共享契约；Reactor 非阻塞链路、Servlet Filter 和容器线程模型等实现约束由各项目文档补充。IAM、领域服务、普通公共库和前端项目不适用本 Profile。
+`g2rain-gateway-webflux` 与 `g2rain-gateway-webmvc` 均已开发完成并发布。Profile 规定两类网关的共享契约；Reactor 非阻塞链路、Servlet Filter 和容器线程模型等实现约束由各项目文档补充。IAM、领域服务、普通公共库和前端项目不适用本 Profile。
 
 ## 强制规则
 
@@ -28,14 +28,14 @@
 - [测试策略](testing-policy.md)
 - [完成定义](definition-of-done.md)
 
-## Draft 转正式条件
+## 后续验证与快照维护
 
 - `g2rain-gateway-webflux` 的项目文档、元数据和本地链接保持一致；
 - `mvn test`、Maven Enforcer 及适用静态检查通过；
-- 关闭试点项目中开发默认凭据、敏感请求日志和 JaCoCo 无执行数据问题；
+- 跟踪项目中开发默认凭据、敏感请求日志和 JaCoCo 无执行数据问题；
 - 补充 API Key、JWT、API 权限、白名单和主体边界的关键负向测试；
-- 完成 `g2rain-gateway-webmvc` 的项目初始化与共享契约差异审核；
+- 维护 `g2rain-gateway-webmvc` 的共享契约与实现差异审核；
 - 完成 Nacos、Basis、Infra、同步消息、IAM 契约和至少一个真实下游服务联调；
 - 中央变更评审合并后发布 `architecture-v1.3.0` 固定标签。
 
-Draft 期间项目固定到试点分支 `feature/g2rain-architectur-init`，不得宣称已采用正式版。
+当前中央登记为开发完成。现有引用与目标快照分别保留；`architecture-v1.3.0` 的标签创建及消费者引用升级按发布流程执行。

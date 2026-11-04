@@ -1,8 +1,10 @@
 schemaVersion: 1
 id: gateway-service
 name: Gateway Service
-version: 1.0.0-draft
-status: draft
+version: 1.0.0
+status: completed
+statusUpdatedAt: "2026-11-04"
+statusSource: maintainer-confirmed
 baselineRef: feature/g2rain-architectur-init
 targetBaselineRef: architecture-v1.3.0
 owners:
@@ -59,7 +61,7 @@ validation:
   externalIntegrationRequiredForStable: true
   imageVerificationRequiredForRelease: true
 
-pilotImplementations:
+completedImplementations:
   - g2rain/g2rain-gateway-webflux
 plannedImplementations:
   - g2rain/g2rain-gateway-webmvc

@@ -146,3 +146,7 @@ npm install --save-exact @g2rain/theme@1.0.1 @g2rain/ui@1.0.1 @g2rain/http@1.0.1
 新增发布时，先核对官方 Registry 的指定版本，再更新本页及[中央登记](architecture/catalog/projects.yaml)，记录核对日期。历史 Release 说明保留其当时版本，不随本页修改。
 
 [前端发布介绍](releases/ecosystem-v2026.10.29.md) · [后端发布介绍](releases/backend-ecosystem-v2026.10.30.md) · [开源协议](licenses.md) · [开发与部署](getting-started.md)
+
+## 业务模块发布目录
+
+业务服务、业务前端、主壳与 Agent 核心模块均已发布，逐模块版本、交付范围及发布说明见[2026-11-04 业务模块发布目录](releases/business-modules-v2026.11.04.md)。
