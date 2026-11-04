@@ -108,6 +108,7 @@ flowchart LR
 - **反馈与使用问题**：[Issues](https://github.com/g2rain/g2rain/issues/new/choose)，附上目标仓库、版本、环境与复现步骤。
 - **场景与想法交流**：[Discussions](https://github.com/g2rain/g2rain/discussions)，分享知识问答、企业权限或 Agent 集成需求。
 - **提交文档与代码**：阅读[贡献指南](community/CONTRIBUTING.md)，在对应仓库提出 PR。
+- **参与开源共建**：查看[贡献者招募](community/RECRUITMENT.md)，选择感兴趣的方向，从一个小任务开始协作。
 - **参与架构设计**：按[架构治理流程](governance/architecture-governance.md)讨论跨项目决策与试点。
 - **社区与安全**：遵守[行为准则](community/CODE_OF_CONDUCT.md)；安全问题按[私下披露流程](governance/security.md)报告。
 
