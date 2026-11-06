@@ -39,7 +39,7 @@ G2rain（谷雨）面向希望将 AI 接入实际业务的开发者与企业团�
 | 你的目标 | 建议路径 | 当前状态 |
 | --- | --- | --- |
 | 先看看知识对话和平台界面 | [在线演示](#在线演示) → [界面展示](docs/showcase.md) | 演示可体验 |
-| 部署知识库或搭建业务应用环境 | [开发与部署入口](docs/getting-started.md) → [g2rain-deploy](https://github.com/g2rain/g2rain-deploy) | 基础、现有 SaaS基座与知识库已可用 |
+| 生成生产部署方案、部署知识库或搭建业务应用环境 | [开发与部署入口](docs/getting-started.md) → [g2rain-bootstrap](https://github.com/g2rain/g2rain-bootstrap) · [g2rain-deploy](https://github.com/g2rain/g2rain-deploy) | Bootstrap 用于快速启动和生产部署；Deploy 用于开发联调 |
 | 开发自己的前后端应用 | [前端工具链](docs/releases/ecosystem-v2026.10.29.md) · [后端工具链](docs/releases/backend-ecosystem-v2026.10.30.md) | 组件、模板与工具已有版本发布 |
 | 接入智能体或智能客服 | [能力与路线图](docs/roadmap.md) → [联系维护者](https://www.g2rain.com/platform/contact.html) | 智能体平台与智能客服均已开源 |
 
@@ -86,7 +86,7 @@ flowchart LR
 | Agent | [Agent 导览](docs/overview.md#agent-能力) | Runtime、知识服务与运营应用的协作边界 |
 | 前端与共享能力 | [g2rain-main-shell](https://github.com/g2rain/g2rain-main-shell) · [Appkit](docs/architecture/platform-libraries/g2rain-appkit.md) | 微前端主壳、业务应用与公共库 |
 | 前后端研发工具 | [App CLI](docs/architecture/platform-tools/g2rain-app-cli.md) · [Crafter](docs/architecture/platform-tools/g2rain-crafter.md) · [Generator](docs/architecture/platform-tools/g2rain-generator-maven-plugin.md) | 项目创建、模板与代码生成 |
-| 部署与运行 | [g2rain-deploy](https://github.com/g2rain/g2rain-deploy) | 环境要求、初始化与生命周期管理 |
+| 平台部署工具 | [g2rain-bootstrap](https://github.com/g2rain/g2rain-bootstrap) · [g2rain-deploy](https://github.com/g2rain/g2rain-deploy) | 同一大类下的快速启动与生产部署、开发部署与联调测试 |
 | 架构与治理 | [架构基线](docs/architecture/README.md) · [项目目录](docs/architecture/catalog/projects.yaml) | Profile、ADR、采用状态与显式升级 |
 
 准备动手时，从[开始探索与开发](docs/getting-started.md)选择路径。本仓库维护文档与治理，应用运行步骤由各项目提供。
@@ -95,7 +95,7 @@ flowchart LR
 
 **平台已具备应用开发、部署与使用的基础。** 现有部署编排覆盖基础设施、平台服务、前端应用及知识库等业务扩展；前后端公共组件、工程生成工具与模板已有独立版本发布。
 
-路线图按 **基础搭建 → SaaS基座能力 → 知识库能力 → 智能体平台 → 智能客服 → 商业化** 展开。基础搭建、SaaS基座现有能力和知识库已可用；智能体平台与智能客服核心模块均已发布并开源；商业化能力处于规划设计中。详见[平台路线图](docs/roadmap.md)，或从[部署仓库](https://github.com/g2rain/g2rain-deploy)开始搭建环境。
+路线图按 **基础搭建 → SaaS基座能力 → 知识库能力 → 智能体平台 → 智能客服 → 商业化** 展开。基础搭建、SaaS基座现有能力和知识库已可用；智能体平台与智能客服核心模块均已发布并开源；商业化能力处于规划设计中。详见[平台路线图](docs/roadmap.md)。生产部署从 [g2rain-bootstrap](https://github.com/g2rain/g2rain-bootstrap) 生成方案，开发阶段联调使用 [g2rain-deploy](https://github.com/g2rain/g2rain-deploy)。
 
 ### 是否适合你的项目
 

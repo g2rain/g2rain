@@ -42,14 +42,14 @@
 | 研发工具链 | App CLI 创建前端工程与权限资源；Crafter 和 Generator 创建后端骨架及分层业务代码 | 前后端配套生成示例、生成结果质量与使用体验 |
 | 公共组件 | Common、MyBatis Extensions、Spring Boot Starter、Appkit | 公共 API、依赖兼容性与组件文档 |
 | 基础设施 | MySQL、Redis、Nacos、Kafka、Nginx 等环境编排 | 环境配置、依赖检查、可观察性与故障定位 |
-| 部署与更新 | Docker Compose 编排，初始化、启动、停止、源码镜像构建与更新脚本，业务扩展片段 | 版本固定、部署自动化、升级回滚与备份恢复演练 |
+| 部署与更新 | Bootstrap 与 Deploy 同属平台部署工具：前者负责快速启动与生产部署，后者负责开发阶段部署与联调测试 | 版本固定、生产方案生成能力完善、部署自动化、升级回滚与备份恢复演练 |
 | 架构与协作 | Profile、ADR、项目目录、版本登记与多仓库协作规则 | 示例工程与项目文档同步、兼容验证记录 |
 
-**现在可以做什么：** 使用脚手架创建应用，开发业务功能，通过部署仓库搭建环境、装配服务和前端入口，并执行应用更新。
+**现在可以做什么：** 使用脚手架创建应用，开发业务功能；通过 Deploy 完成开发部署与跨模块联调，通过 Bootstrap 按目标生成生产部署方案并快速启动。Bootstrap 的默认资源配置是最低限度跑通的验证预设，不是生产容量基线。
 
 **后续建设目标：** 提供一套从创建工程、开发页面与接口到部署运行的配套示例，记录版本、配置和升级步骤，让新使用者能够按文档复现。
 
-入口：[开发指南](getting-started.md) · [部署仓库](https://github.com/g2rain/g2rain-deploy) · [前端工具链](releases/ecosystem-v2026.10.29.md) · [后端工具链](releases/backend-ecosystem-v2026.10.30.md)
+入口：[开发指南](getting-started.md) · [Bootstrap](https://github.com/g2rain/g2rain-bootstrap) · [Deploy](https://github.com/g2rain/g2rain-deploy) · [前端工具链](releases/ecosystem-v2026.10.29.md) · [后端工具链](releases/backend-ecosystem-v2026.10.30.md)
 
 ## 二、SaaS基座能力
 
@@ -101,9 +101,9 @@
 
 **当前状态：已开发完成并开源。** 维护者于 2026-11-04 确认智能客服已开放源码。
 
-智能客服面向客户咨询与业务服务场景，结合 SaaS基座、知识库与智能体能力提供服务入口。当前可通过知识对话演示体验对话交互。
+智能客服面向客户咨询与业务服务场景，结合 SaaS 基座、知识库与智能体能力提供服务入口。当前可通过知识对话演示体验对话交互。源码和版本已经发布；正式接入某个租户或业务系统前，应完成知识检索、Agent 执行、人工接管（如配置）以及业务工具授权的端到端验证。
 
-**后续完善：** 完善场景接入指南、知识资料准备要求和使用说明，明确部署配置与接入方式，并围绕真实客户问题持续完善服务体验与反馈处理。
+**后续完善：** 完善场景接入指南、知识资料准备要求和使用说明，明确部署配置与接入方式；围绕真实客户问题持续完善服务体验与反馈处理，并持续验证跨租户隔离、越权拒绝、会话范围和工具写操作边界。
 
 接入交流请[联系维护者](https://www.g2rain.com/platform/contact.html)。
 
@@ -187,6 +187,6 @@
 
 当前优先在已有可部署版本上完善上手与场景体验，持续完善已开源的智能体平台与智能客服。发布记录、项目配置、架构采用与环境验收分别维护；历史设计和早期验证记录保留其日期，不替代当前版本事实。
 
-部署入口见 [g2rain-deploy](https://github.com/g2rain/g2rain-deploy)。具体环境的可用功能与运行范围按所选组件版本、配置和部署验证记录说明。本次调整路线图，未重新执行部署或跨服务联调。
+快速启动与生产部署见 [g2rain-bootstrap](https://github.com/g2rain/g2rain-bootstrap)，开发阶段部署与联调测试见 [g2rain-deploy](https://github.com/g2rain/g2rain-deploy)。具体环境的可用功能与运行范围按所选组件版本、配置和部署验证记录说明。本次调整路线图，未重新执行部署或跨服务联调。
 
 欢迎在 [Issues](https://github.com/g2rain/g2rain/issues) 或 [Discussions](https://github.com/g2rain/g2rain/discussions)提出场景需求与使用反馈。实施任务记录责任项目、负责人、依赖、目标版本和验收条件，完成后同步项目文档与路线图。

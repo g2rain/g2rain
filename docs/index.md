@@ -15,11 +15,12 @@
 | 知识与 Agent 的界面和业务场景 | [三张界面展示](showcase.md) → [知识与 Agent 导览](overview.md#知识库) |
 | 安装哪个 Maven / npm 版本，如何配套 | [版本与依赖](versions.md) |
 | 如何动手开发或部署 | [开始探索与开发](getting-started.md) |
+| 如何生成部署方案并快速启动 | [g2rain-bootstrap](https://github.com/g2rain/g2rain-bootstrap)（默认最低资源验证预设） |
 | 已发布什么，接下来做什么，如何判断完成 | [平台路线图](roadmap.md) → [项目架构目录](architecture/catalog/projects.yaml) |
 | 与其他开源项目如何选型 | [RuoYi、Dify、RAGFlow 对比](comparison.md) |
 | 已开放模块采用什么协议 | [开源协议说明](licenses.md) |
 | 如何参与 | [贡献指南](../community/CONTRIBUTING.md) → [社区与治理](#社区与治理) |
-| 查看前端开发工具发布 | [2026-10-29：Appkit、App CLI 与两个模板 v1.0.1](releases/ecosystem-v2026.10.29.md) |
+| 查看前端开发工具发布 | [前端工具链发布记录](releases/ecosystem-v2026.10.29.md)（Appkit v1.0.1；App CLI 与模板已更新至 v1.0.2） |
 
 - [2026-10-30 后端工具链发布：Common、MyBatis Extensions、Starter、Generator 与 Crafter](releases/backend-ecosystem-v2026.10.30.md)
 

@@ -2,7 +2,7 @@
 
 **一个命令创建业务应用或主壳，用一套公共组件与平台能力，让更多时间留给业务开发。**
 
-G2rain（谷雨）开源智能体平台面向企业应用场景，连接模型、知识与业务工具。本次集中介绍 **Appkit、App CLI、App Template、Shell Template v1.0.1**：从公共能力、工程创建到主子应用模板，为 Vue 3 业务应用提供配套开发工具。
+G2rain（谷雨）开源智能体平台面向企业应用场景，连接模型、知识与业务工具。本页记录前端工具链的首轮发布；当前 Appkit 为 v1.0.1，App CLI、App Template 与 Shell Template 已更新至 v1.0.2。从公共能力、工程创建到主子应用模板，为 Vue 3 业务应用提供配套开发工具。
 
 **[访问官网](https://www.g2rain.com) · [探索源码](https://github.com/g2rain/g2rain) · [开发入门](https://github.com/g2rain/g2rain/blob/main/docs/getting-started.md)**
 
@@ -13,9 +13,9 @@ G2rain（谷雨）开源智能体平台面向企业应用场景，连接模型�
 | 项目 | 为你解决什么 | 发布入口 |
 | --- | --- | --- |
 | **Appkit** | 将主题、UI 组件、HTTP 与应用运行能力沉淀为四个公共包，减少重复建设 | [v1.0.1](https://github.com/g2rain/g2rain-appkit/releases/tag/v1.0.1) |
-| **App CLI** | 创建业务应用与主壳，从 SQL 生成 CRUD 骨架，从页面声明提取权限资源 | [v1.0.1](https://github.com/g2rain/g2rain-app-cli/releases/tag/v1.0.1) |
-| **App Template** | 提供 Vue 3 业务子应用起点，支持独立开发、微前端集成、认证与动态资源路由 | [v1.0.1](https://github.com/g2rain/g2rain-app-template/releases/tag/v1.0.1) |
-| **Shell Template** | 提供菜单、Tab 与工作区主入口，组织业务子应用的挂载和协作 | [v1.0.1](https://github.com/g2rain/g2rain-shell-template/releases/tag/v1.0.1) |
+| **App CLI** | 创建业务应用与主壳，从 SQL 生成 CRUD 骨架，从页面声明提取权限资源 | [v1.0.2](https://github.com/g2rain/g2rain-app-cli/releases/tag/v1.0.2) |
+| **App Template** | 提供 Vue 3 业务子应用起点，支持独立开发、微前端集成、认证与动态资源路由 | [v1.0.2](https://github.com/g2rain/g2rain-app-template/releases/tag/v1.0.2) |
+| **Shell Template** | 提供菜单、Tab 与工作区主入口，组织业务子应用的挂载和协作 | [v1.0.2](https://github.com/g2rain/g2rain-shell-template/releases/tag/v1.0.2) |
 
 ### Appkit：常用组件与平台能力，按需使用
 

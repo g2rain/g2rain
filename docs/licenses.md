@@ -23,6 +23,7 @@
 | [g2rain-department](https://github.com/g2rain/g2rain-department) | Apache-2.0 | [LICENSE](https://github.com/g2rain/g2rain-department/blob/main/LICENSE) |
 | [g2rain-department-app](https://github.com/g2rain/g2rain-department-app) | Apache-2.0 | [LICENSE](https://github.com/g2rain/g2rain-department-app/blob/main/LICENSE) |
 | [g2rain-deploy](https://github.com/g2rain/g2rain-deploy) | Apache-2.0 | [LICENSE](https://github.com/g2rain/g2rain-deploy/blob/main/LICENSE) |
+| [g2rain-bootstrap](https://github.com/g2rain/g2rain-bootstrap) | Apache-2.0 | [LICENSE](https://github.com/g2rain/g2rain-bootstrap/blob/main/LICENSE) |
 | [g2rain-gateway-webflux](https://github.com/g2rain/g2rain-gateway-webflux) | Apache-2.0 | [LICENSE](https://github.com/g2rain/g2rain-gateway-webflux/blob/main/LICENSE) |
 | [g2rain-gateway-webmvc](https://github.com/g2rain/g2rain-gateway-webmvc) | Apache-2.0 | [LICENSE](https://github.com/g2rain/g2rain-gateway-webmvc/blob/main/LICENSE) |
 | [g2rain-generator-archetype](https://github.com/g2rain/g2rain-generator-archetype) | Apache-2.0 | [LICENSE](https://github.com/g2rain/g2rain-generator-archetype/blob/main/LICENSE) |

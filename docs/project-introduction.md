@@ -58,7 +58,7 @@
 
 ## 平台、组织与仓库的关系
 
-G2rain 是平台名称，GitHub 的 g2rain 是组织；g2rain/g2rain 是平台介绍、架构治理、项目导航与社区总入口。应用实现分布在各责任仓库，部署入口为 g2rain-deploy。主仓库本身不提供一套可直接启动的应用源码。
+G2rain 是平台名称，GitHub 的 g2rain 是组织；g2rain/g2rain 是平台介绍、架构治理、项目导航与社区总入口。应用实现分布在各责任仓库；`g2rain-bootstrap` 与 `g2rain-deploy` 同属平台部署工具，前者负责快速启动和生产部署方案，后者主要用于开发阶段部署与跨模块联调测试。主仓库本身不提供一套可直接启动的应用源码。
 
 | 项目组 | 责任项目与资料 |
 | --- | --- |
@@ -66,7 +66,7 @@ G2rain 是平台名称，GitHub 的 g2rain 是组织；g2rain/g2rain 是平台�
 | 知识库 | [知识服务](https://github.com/g2rain/g2rain-knowledge)与[运营端](https://github.com/g2rain/g2rain-knowledge-app) |
 | 前端开发 | Appkit、App CLI、App Template、Shell Template，见[发布介绍](releases/ecosystem-v2026.10.29.md) |
 | 后端开发 | Common、MyBatis Extensions、Spring Boot Starter、Generator、Crafter，见[发布介绍](releases/backend-ecosystem-v2026.10.30.md) |
-| 部署 | [g2rain-deploy](https://github.com/g2rain/g2rain-deploy) |
+| 平台部署工具 | [g2rain-bootstrap](https://github.com/g2rain/g2rain-bootstrap)（快速启动与生产部署，默认配置为最低资源验证预设） · [g2rain-deploy](https://github.com/g2rain/g2rain-deploy)（开发阶段部署与联调测试） |
 
 平台范围以现行项目目录和维护者确认内容为准，不根据仓库名称前缀自行扩展。历史 ADR 与旧设计中的项目不自动成为当前平台组成。
 

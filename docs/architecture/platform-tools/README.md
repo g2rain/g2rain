@@ -13,7 +13,8 @@
 
 | 工具 | 状态 | 作用 | 相关 Profile |
 | --- | --- | --- | --- |
-| [g2rain-app-cli](g2rain-app-cli.md) | 官方唯一前端项目脚手架，v1.0.1 已发布 | 从官方模板创建符合前端架构基线的 App | `frontend-app 1.0.0` |
+| [g2rain-app-cli](g2rain-app-cli.md) | 官方唯一前端项目脚手架，v1.0.2 已发布 | 从官方模板创建符合前端架构基线的 App | `frontend-app 1.0.0` |
+| [g2rain-shell-template](https://github.com/g2rain/g2rain-shell-template) | 官方 Main Shell 模板，v1.0.2 已发布 | 生成符合 `frontend-shell` 基线的主壳工程 | `frontend-shell 1.0.0` |
 | [g2rain-crafter](g2rain-crafter.md) | 官方唯一后端项目与代码生成 Maven 插件；v1.0.9 已发布（原测试记录见登记） | 生成 API/Biz/Startup 骨架并持续生成数据库业务代码 | `java-domain-service 1.0.0` |
 | [g2rain-generator-maven-plugin](g2rain-generator-maven-plugin.md) | 官方唯一后端数据库代码生成引擎；v1.0.8 已发布（原测试记录见登记） | 将表元数据生成为 API、DTO、DAO、Service、Controller 等分层代码 | `java-domain-service 1.0.0` |
 

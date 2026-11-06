@@ -83,11 +83,27 @@ projects:
     validatedAt: "2026-08-25"
     deviationsFile: docs/architecture/deviations.md
 
+  - repository: g2rain/g2rain-shell-template
+    currentVersion: 1.0.2
+    releaseTag: v1.0.2
+    releaseUrl: https://github.com/g2rain/g2rain-shell-template/releases/tag/v1.0.2
+    releaseCheckedAt: "2026-11-05"
+    profile: frontend-shell
+    baseProfile: frontend-app
+    baseProfileVersion: 1.0.0
+    baselineVersion: 1.0.0
+    adoptionStatus: adopted
+    baselineRef: v1.0.2
+    targetBaselineRef: architecture-v1.2.0
+    validationStatus: build-passed
+    documentationStatus: documented
+    note: Shell Template 已发布 v1.0.2；由 g2rain-app-cli shell 命令生成 frontend-shell 基线，具体生成结果和项目接入由责任项目维护。
+
   - repository: g2rain/g2rain-app-cli
-    currentVersion: 1.0.1
-    releaseTag: v1.0.1
-    releaseUrl: https://github.com/g2rain/g2rain-app-cli/releases/tag/v1.0.1
-    releaseCheckedAt: "2026-10-31"
+    currentVersion: 1.0.2
+    releaseTag: v1.0.2
+    releaseUrl: https://github.com/g2rain/g2rain-app-cli/releases/tag/v1.0.2
+    releaseCheckedAt: "2026-11-05"
     profile: null
     architectureType: frontend-tooling-cli
     adoptionStatus: supporting-tool
@@ -296,3 +312,41 @@ projects:
     deviationsFile: docs/architecture/deviations.md
     pairedRepository: g2rain/g2rain-knowledge
     note: 维护者于 2026-11-04 确认开发完成；历史构建、测试和偏差记录保留各自日期，后续环境验证按责任项目维护。
+
+  - repository: g2rain/g2rain-deploy
+    profile: null
+    architectureType: platform-deployment-tool
+    deploymentRole: development-integration-deployment
+    adoptionStatus: platform-deployment-entry
+    productStatus: available
+    deploymentStatus: development-testing
+    documentationStatus: repository-documented
+    pairedRepository: g2rain/g2rain-bootstrap
+    capabilities:
+      - development-compose-orchestration
+      - environment-initialization
+      - cross-module-integration-testing
+      - source-image-build-and-update
+      - business-extension-testing
+    note: 与 g2rain-bootstrap 同属平台部署工具；主要用于开发阶段部署和跨模块联调测试，维护开发环境的初始化、启停、源码镜像构建、更新与业务扩展验证，不作为生产部署入口。
+
+  - repository: g2rain/g2rain-bootstrap
+    profile: null
+    architectureType: platform-deployment-tool
+    deploymentRole: production-deployment-bootstrap
+    adoptionStatus: platform-deployment-entry
+    productStatus: available
+    deploymentStatus: configuration-validated
+    documentationStatus: repository-documented
+    validationStatus: compose-config-passed
+    validatedAt: "2026-11-06"
+    capabilities:
+      - deployment-plan-generation
+      - docker-compose-bootstrap
+      - production-deployment
+      - base-platform
+      - agent-extension
+      - knowledge-extension
+    defaultPreset: minimum-resource-validation
+    pairedRepository: g2rain/g2rain-deploy
+    note: 负责按目标生成部署方案、快速启动与生产部署。仓库默认配置面向单请求和最低资源跑通，仅为验证预设，不是生产容量基线；生产方案必须重新配置资源、凭据、TLS、端口、持久化、备份与恢复。G2rain 服务使用已发布 GHCR 镜像，Docling 基于官方公共镜像在本地应用兼容修复。已通过 Compose 静态解析，尚未在本次中央登记中启动全栈或验证运行时健康状态。
