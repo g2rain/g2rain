@@ -63,5 +63,4 @@ validation:
 
 completedImplementations:
   - g2rain/g2rain-gateway-webflux
-plannedImplementations:
   - g2rain/g2rain-gateway-webmvc

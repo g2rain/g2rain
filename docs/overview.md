@@ -2,7 +2,7 @@
 
 G2rain（谷雨）是开源智能体平台，面向企业场景连接模型、知识与业务工具，通过统一身份与权限管理支撑智能体及业务应用协作。Java 微服务、Vue 3 微前端、公共组件和研发工具构成平台的工程基础。平台以多仓库方式维护，各项目独立记录实现、配置、部署与验证状态。
 
-平台已具备私有部署场景的可用性，现有 SaaS基座、知识库及业务应用可在企业环境部署使用。云端运营的交易、订阅与计量计费仍在规划，不是私有部署的前置条件。可从[部署仓库](https://github.com/g2rain/g2rain-deploy)搭建环境。后续按基础搭建、SaaS基座能力、知识库能力、智能体平台、智能客服与商业化六个方向推进，详见[路线图](roadmap.md)。
+平台已具备私有部署场景的可用性，现有 SaaS基座、知识库及业务应用可在企业环境部署使用。云端运营的交易、订阅与计量计费仍在规划，不是私有部署的前置条件。生产部署从 [g2rain-bootstrap](https://github.com/g2rain/g2rain-bootstrap) 生成方案并快速启动，开发联调使用 [g2rain-deploy](https://github.com/g2rain/g2rain-deploy)。后续按基础搭建、SaaS基座能力、知识库能力、智能体平台、智能客服与商业化六个方向推进，详见[路线图](roadmap.md)。
 
 需要引用或分享项目时，可使用[项目介绍与引用资料](project-introduction.md)，其中提供统一简介、能力状态和行动入口。
 
@@ -18,7 +18,7 @@ G2rain（谷雨）是开源智能体平台，面向企业场景连接模型、�
 | Agent 知识证据调用与对话编排 | [Agent 导览](#agent-能力) · [在线演示](roadmap.md#在线演示) |
 | 开发前端或后端应用 | [前端 CLI](architecture/platform-tools/g2rain-app-cli.md) · [后端 Crafter](architecture/platform-tools/g2rain-crafter.md) |
 | 了解平台规则与项目状态 | [架构基线](architecture/README.md) · [项目目录](architecture/catalog/projects.yaml) |
-| 运行平台环境 | [部署仓库](https://github.com/g2rain/g2rain-deploy) |
+| 运行平台环境 | [g2rain-bootstrap](https://github.com/g2rain/g2rain-bootstrap)（生产部署） · [g2rain-deploy](https://github.com/g2rain/g2rain-deploy)（开发联调） |
 
 ## 知识库
 

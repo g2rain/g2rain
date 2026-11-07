@@ -89,7 +89,7 @@ mvn com.g2rain:g2rain-generator-maven-plugin:1.0.8:generate -Dconfig.file=codege
 
 | 包名 | 已核实版本 | 用途 |
 | --- | --- | --- |
-| `create-g2rain-app` | [1.0.1](https://www.npmjs.com/package/create-g2rain-app/v/1.0.1) | 创建 App / Shell，生成 CRUD 与权限资源 |
+| `create-g2rain-app` | [1.0.2](https://www.npmjs.com/package/create-g2rain-app/v/1.0.2) | 创建 App / Shell，生成 CRUD 与权限资源 |
 | `@g2rain/theme` | [1.0.1](https://www.npmjs.com/package/@g2rain/theme/v/1.0.1) | 设计变量、亮暗主题与样式 |
 | `@g2rain/ui` | [1.0.1](https://www.npmjs.com/package/@g2rain/ui/v/1.0.1) | Vue / Element Plus 公共组件 |
 | `@g2rain/http` | [1.0.1](https://www.npmjs.com/package/@g2rain/http/v/1.0.1) | HTTP、认证刷新、错误与 SSE |
@@ -101,10 +101,10 @@ mvn com.g2rain:g2rain-generator-maven-plugin:1.0.8:generate -Dconfig.file=codege
 
 ```bash
 # 业务子应用
-npx create-g2rain-app@1.0.1 app g2rain-demo-app --context-path demo
+npx create-g2rain-app@1.0.2 app g2rain-demo-app --context-path demo
 
 # 主壳
-npx create-g2rain-app@1.0.1 shell g2rain-demo-shell --context-path admin --port 3000
+npx create-g2rain-app@1.0.2 shell g2rain-demo-shell --context-path admin --port 3000
 ```
 
 进入生成目录后执行 `npm install`、`npm run dev`，并按生成项目 README 配置运行模式、认证和网关。CLI 使用包内固定模板快照，App / Shell Template 是模板源码仓库，不是这两个创建命令所需额外安装的 npm 包。
@@ -125,7 +125,7 @@ npm install --save-exact @g2rain/theme@1.0.1 @g2rain/ui@1.0.1 @g2rain/http@1.0.1
 | --- | --- | --- |
 | 后端公共能力 | Common 1.0.9、MyBatis Extensions 1.0.5、Starter 1.0.6 | JDK 25；Starter 及 Crafter 生成项目的本轮基线为 Spring Boot 4.1.2 / Spring Cloud 2025.1.4 |
 | 后端生成 | Crafter 1.0.9 → Generator 1.0.8 | JDK 25、Maven；生成参数、数据库连接和构建验证见责任项目 |
-| 前端工程 | CLI 1.0.1 → App / Shell Template v1.0.1 → Appkit 1.0.1 | Node.js 22+；应用配置与运行依赖由生成项目管理 |
+| 前端工程 | CLI 1.0.2 → App / Shell Template v1.0.2 → Appkit 1.0.1 | Node.js 22+；应用配置与运行依赖由生成项目管理 |
 | UI | `@g2rain/ui` 1.0.1 | peer：Vue `^3.5.0`、Element Plus `^2.13.0`、图标包 `^2.3.2`、Theme `^1.0.1` |
 | Platform Vue 入口 | `@g2rain/platform` 1.0.1 | Vue `^3.5.0`、Vue I18n `^11.4.4` 为可选 peer，使用相应入口时提供 |
 | 知识库应用 | 知识服务 v1.0.0 + 运营端 v1.0.0 | 按应用版本文档部署；不将 GitHub Release 直接视为 Maven、npm 或镜像已发布 |
