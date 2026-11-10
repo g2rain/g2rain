@@ -26,7 +26,7 @@
 | --- | --- | --- | --- |
 | 基础搭建 | 如何创建、开发、部署和维护应用 | **已可用**：应用开发与部署基础，前后端组件和工具已发布 | 配套示例、升级体验、部署自动化与运维完善 |
 | SaaS基座能力 | 如何支撑多租户、多应用、身份与权限管理 | **已可用（现有基座）**：平台服务、管理应用与业务应用接入 | 租户与权限场景完善、服务协作与使用体验 |
-| 知识库能力 | 如何将业务资料变成可维护、可检索的知识 | **已可用**：服务和运营端 v1.0.0 已发布，可部署使用 | 内容处理、检索质量、反馈修订与运行稳定性 |
+| 知识库能力 | 如何将业务资料变成可维护、可检索的知识 | **已可用**：服务 v1.0.0 和运营端 v1.0.0 已发布，可部署使用 | 内容处理、检索质量、反馈修订与运行稳定性 |
 | 智能体平台 | 如何连接模型、知识与工具完成任务 | **已开发完成并开源** | 接入文档、使用示例与持续运营 |
 | 智能客服 | 如何围绕客户问题提供连续服务 | **已开发完成并开源** | 场景接入指南与使用反馈 |
 | 商业化 | 如何将平台能力转化为可交易、可开通、可计量的产品 | **规划设计中** | 产品套餐、交易支付、服务开通、订阅、计量计费、账单与经营分析 |
@@ -70,7 +70,7 @@
 
 ## 三、知识库能力
 
-**当前状态：已可用。** 知识服务与运营端 v1.0.0 已发布，可按项目文档部署使用。
+**当前状态：已可用。** 知识服务 v1.0.0 与运营端 v1.0.0 已发布，可按项目文档部署使用。
 
 **已可用能力：** 文件与 FAQ、分类与标签、主题与版本管理，以及审核、处理、发布、回滚、检索证据与回答接口。知识处理链路连接 Docling、Embedding、Milvus 与可选 Rerank；部署仓库提供对应业务扩展编排。
 
@@ -95,7 +95,7 @@
 
 现有演示入口见[在线演示](#在线演示)。源码使用与部署按各项目文档进行；演示体验不替代具体环境的配置与验证。
 
-入口：[Agent 导览](overview.md#agent-能力) · [跨服务集成设计](architecture/knowledge-integration.md) · [部署扩展](https://github.com/g2rain/g2rain-deploy)
+入口：[Agent 导览](overview.md#agent-能力) · [跨服务集成设计](architecture/knowledge-integration.md) · [Bootstrap 部署入口](https://github.com/g2rain/g2rain-bootstrap)
 
 ## 五、智能客服
 
@@ -181,7 +181,7 @@
 | Appkit、App CLI、App Template、Shell Template | Appkit v1.0.1；CLI 与两个模板 v1.0.2 | [前端发布介绍](releases/ecosystem-v2026.10.29.md) |
 | Common / MyBatis Extensions / Spring Boot Starter | v1.0.9 / v1.0.5 / v1.0.6 | [后端发布介绍](releases/backend-ecosystem-v2026.10.30.md) |
 | Generator / Crafter | v1.0.8 / v1.0.9 | [后端发布介绍](releases/backend-ecosystem-v2026.10.30.md) |
-| 知识服务 / 知识运营端 | 均为 v1.0.0 | [知识服务](https://github.com/g2rain/g2rain-knowledge/releases/tag/v1.0.0) · [运营端](https://github.com/g2rain/g2rain-knowledge-app/releases/tag/v1.0.0) |
+| 知识服务 / 知识运营端 | v1.0.0 / v1.0.0 | [知识服务](https://github.com/g2rain/g2rain-knowledge/releases/tag/v1.0.0) · [运营端](https://github.com/g2rain/g2rain-knowledge-app/releases/tag/v1.0.0) |
 
 ## 推进与维护
 
