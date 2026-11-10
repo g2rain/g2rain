@@ -331,15 +331,20 @@ projects:
     note: 与 g2rain-bootstrap 同属平台部署工具；主要用于开发阶段部署和跨模块联调测试，维护开发环境的初始化、启停、源码镜像构建、更新与业务扩展验证，不作为生产部署入口。
 
   - repository: g2rain/g2rain-bootstrap
+    currentVersion: 1.0.0-local
+    releaseTag: null
+    repositoryUrl: https://github.com/g2rain/g2rain-bootstrap
+    sourceBranch: main
+    sourceCommit: bcd7db1eea2981a828d17d32930724bad9f86341
     profile: null
     architectureType: platform-deployment-tool
     deploymentRole: production-deployment-bootstrap
     adoptionStatus: platform-deployment-entry
     productStatus: available
-    deploymentStatus: configuration-validated
+    deploymentStatus: local-baseline
     documentationStatus: repository-documented
     validationStatus: compose-config-passed
-    validatedAt: "2026-11-06"
+    validatedAt: "2026-11-10"
     capabilities:
       - deployment-plan-generation
       - docker-compose-bootstrap
@@ -349,4 +354,4 @@ projects:
       - knowledge-extension
     defaultPreset: minimum-resource-validation
     pairedRepository: g2rain/g2rain-deploy
-    note: 负责按目标生成部署方案、快速启动与生产部署。仓库默认配置面向单请求和最低资源跑通，仅为验证预设，不是生产容量基线；生产方案必须重新配置资源、凭据、TLS、端口、持久化、备份与恢复。G2rain 服务使用已发布 GHCR 镜像，Docling 基于官方公共镜像在本地应用兼容修复。已通过 Compose 静态解析，尚未在本次中央登记中启动全栈或验证运行时健康状态。
+    note: 负责按目标生成部署方案、快速启动与生产部署。代码已推送至 GitHub main（commit bcd7db1），当前登记版本仍为 1.0.0-local，尚未形成正式 release tag、中央正式 Profile 或运行时验收结论。仓库默认配置面向单请求和最低资源跑通，仅为验证预设，不是生产容量基线；生产方案必须重新配置资源、凭据、TLS、端口、持久化、备份与恢复。G2rain 服务使用已发布 GHCR 镜像，Docling 基于官方公共镜像在本地应用兼容修复。已通过 Shell/Compose 静态检查，尚未完成真实全栈启动、运行时健康、业务冒烟及备份恢复验收。
