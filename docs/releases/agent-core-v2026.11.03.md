@@ -63,7 +63,7 @@ flowchart LR
 
 1. **先体验交互**：[打开知识对话演示](https://demo.g2rain.com/chat/?entry=ek_xV3IEOTK8HfexoR3PupYcF)，无需登录；试着围绕同一份资料连续提问。
 2. **再选一个切入点**：关注执行机制，从 Runtime 开始；关注业务工具接入，从 MCP Registry 开始；关注产品界面，从 Chat Shell 与 Agent App 开始。
-3. **部署自己的环境**：阅读[开发与部署入口](https://github.com/g2rain/g2rain/blob/main/docs/getting-started.md)和[部署仓库](https://github.com/g2rain/g2rain-deploy)，按各仓库的版本说明准备配置、模型与服务依赖。
+3. **部署自己的环境**：阅读[开发与部署入口](https://github.com/g2rain/g2rain/blob/main/docs/getting-started.md)和[Bootstrap 快速部署](https://github.com/g2rain/g2rain-bootstrap)，按各仓库的版本说明准备配置、模型与服务依赖。
 
 六个核心仓库已发布，本次是平台级联合介绍，各组件的版本、镜像和运行要求请查看对应仓库的发布与部署文档。知识库通过独立的 [g2rain-knowledge](https://github.com/g2rain/g2rain-knowledge) 与运营端提供；本文演示使用了知识能力。源码按各仓库随附的 Apache-2.0 许可证开放，生产接入需完成业务工具、权限和目标环境的联调。
 

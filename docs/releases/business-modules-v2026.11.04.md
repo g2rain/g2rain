@@ -26,6 +26,6 @@
 | [g2rain-agent-studio](https://github.com/g2rain/g2rain-agent-studio) | 1.0.0 | [Agent 画像、Skill 契约与能力绑定](https://github.com/g2rain/g2rain-agent-studio/blob/main/docs/releases/v1.0.0.md) |
 | [g2rain-model-nexus](https://github.com/g2rain/g2rain-model-nexus) | 1.0.0 | [模型目录、协议路由、聊天与 Embeddings](https://github.com/g2rain/g2rain-model-nexus/blob/main/docs/releases/v1.0.0.md) |
 | [g2rain-mcp-registry](https://github.com/g2rain/g2rain-mcp-registry) | 1.0.0 | [MCP 工具目录、schema 与调用代理](https://github.com/g2rain/g2rain-mcp-registry/blob/main/docs/releases/v1.0.0.md) |
-| [g2rain-knowledge](https://github.com/g2rain/g2rain-knowledge) | 1.0.1 | [知识库服务与镜像交付](https://github.com/g2rain/g2rain-knowledge/blob/main/docs/releases/v1.0.1.md) |
+| [g2rain-knowledge](https://github.com/g2rain/g2rain-knowledge) | 1.0.0 | [知识库服务与镜像交付](https://github.com/g2rain/g2rain-knowledge/blob/main/docs/releases/v1.0.0.md) |
 
-部署从 [g2rain-deploy](https://github.com/g2rain/g2rain-deploy) 开始。服务与前端主要通过 GHCR 镜像交付，部分领域 API 另发布至 GitHub Maven Packages；具体渠道、端口与依赖按各版本说明配置。发布不自动升级项目架构 Profile，也不替代目标环境联调。商业交易、订阅与计量计费继续按[路线图](../roadmap.md)规划。
+快速启动与生产部署优先从 [g2rain-bootstrap](https://github.com/g2rain/g2rain-bootstrap) 开始。服务与前端主要通过 GHCR 镜像交付，部分领域 API 另发布至 GitHub Maven Packages；具体渠道、端口与依赖按各版本说明配置。发布不自动升级项目架构 Profile，也不替代目标环境联调。商业交易、订阅与计量计费继续按[路线图](../roadmap.md)规划。
