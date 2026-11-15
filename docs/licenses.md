@@ -53,4 +53,4 @@
 
 ## 相关入口
 
-[平台路线图](roadmap.md) · [项目目录](architecture/catalog/projects.yaml) · [联系维护者](https://www.g2rain.com/platform/contact.html)
+[平台路线图](roadmap.md) · [项目目录](architecture/catalog/projects.yaml) · [微信联系维护者](images/contact/wechat.jpg) · [GitHub Discussions](https://github.com/g2rain/g2rain/discussions)

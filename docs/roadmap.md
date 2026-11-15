@@ -105,14 +105,14 @@
 
 **后续完善：** 完善场景接入指南、知识资料准备要求和使用说明，明确部署配置与接入方式；围绕真实客户问题持续完善服务体验与反馈处理，并持续验证跨租户隔离、越权拒绝、会话范围和工具写操作边界。
 
-接入交流请[联系维护者](https://www.g2rain.com/platform/contact.html)。
+接入交流可通过[微信联系维护者](images/contact/wechat.jpg)，也欢迎在 [GitHub Discussions](https://github.com/g2rain/g2rain/discussions) 留言。
 
 ## 在线演示
 
 - [知识对话演示](https://demo.g2rain.com/chat/?entry=ek_xV3IEOTK8HfexoR3PupYcF)：体验知识对话入口，无需登录。
 - [主应用演示](https://demo.g2rain.com/main/)：体验平台主应用入口，用户名和密码均为 `admin`。
 
-接入交流请[联系维护者](https://www.g2rain.com/platform/contact.html)。
+接入交流可通过[微信联系维护者](images/contact/wechat.jpg)，也欢迎在 [GitHub Discussions](https://github.com/g2rain/g2rain/discussions) 留言。
 
 ## 六、商业化
 

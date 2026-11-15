@@ -120,8 +120,8 @@ G2rain 面向企业智能应用建设，连接模型、知识与业务工具，�
 - **共建交流**：[GitHub Discussions](https://github.com/g2rain/g2rain/discussions)
 - **问题与任务**：[GitHub Issues](https://github.com/g2rain/g2rain/issues)
 - **项目邮箱**：[g2rain_developer@163.com](mailto:g2rain_developer@163.com)
-- **联系维护者**：[官网联系页](https://www.g2rain.com/platform/contact.html)
-- **微信交流群**：通过[官网联系页](https://www.g2rain.com/platform/contact.html)添加维护者，备注「G2rain 共建 + 参与方向」，申请加入交流群。欢迎在群内交流使用问题、扩展思路和贡献计划，获得上手指导；需要跟踪的问题与方案，请同步到 Issue 或 PR，便于后续协作。
+- **联系维护者**：[微信二维码](../docs/images/contact/wechat.jpg) · [GitHub Discussions](https://github.com/g2rain/g2rain/discussions) · [项目邮箱](mailto:g2rain_developer@163.com)
+- **微信交流群**：扫码添加维护者，备注「G2rain 共建 + 参与方向」，申请加入交流群。欢迎在群内交流使用问题、扩展思路和贡献计划，获得上手指导；需要跟踪的问题与方案，请同步到 Issue 或 PR，便于后续协作。
 
 邮件或讨论标题建议使用「G2rain 共建 + 参与方向」，便于定位交流内容。
 
