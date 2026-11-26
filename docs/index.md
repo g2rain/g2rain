@@ -4,13 +4,14 @@
 
 ## 按阅读目标开始
 
-[G2rain v1.0.0 完整发布说明：23 个业务组件联合发布](releases/v1.0.0.md)
+[G2rain v1.0.0 联合发布说明：该次列出的 23 个业务组件](releases/v1.0.0.md) · [当前项目目录：34 个登记仓库](architecture/catalog/projects.yaml)
 
 | 你想了解什么 | 推荐阅读 |
 | --- | --- |
 | 平台是什么，为什么值得关注 | [平台首页](../README.md) → [平台概览](overview.md) |
 | 撰写项目介绍或让 AI 准确引用 | [项目介绍与引用资料](project-introduction.md) · [AI 阅读索引](../llms.txt) |
 | 企业权限怎样建模与校验 | [权限模型与完整说明图](permission-model.md) |
+| 平台模块怎样协作，数据与权限由谁负责 | [平台系统架构](architecture/platform-system.md) |
 | 体验知识对话和平台主应用 | [在线演示与登录说明](roadmap.md#在线演示) |
 | 知识与 Agent 的界面和业务场景 | [三张界面展示](showcase.md) → [知识与 Agent 导览](overview.md#知识库) |
 | 安装哪个 Maven / npm 版本，如何配套 | [版本与依赖](versions.md) |
@@ -50,6 +51,7 @@
 - [AI Coding 执行入口](../AGENTS.md)
 - [组织默认文档约定](organization-defaults.md)
 - [知识服务与智能体集成](architecture/knowledge-integration.md)
+- [平台系统架构与开发者接入边界](architecture/platform-system.md)
 
 ## 架构治理
 
