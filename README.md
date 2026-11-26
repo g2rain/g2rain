@@ -23,7 +23,7 @@ G2rain（谷雨）面向希望将 AI 接入实际业务的开发者与企业团�
 - [知识对话演示](https://demo.g2rain.com/chat/?entry=ek_xV3IEOTK8HfexoR3PupYcF)：体验知识对话入口，无需登录。
 - [主应用演示](https://demo.g2rain.com/main/)：体验平台主应用入口，用户名和密码均为 `admin`。
 
-接入交流请[联系维护者](https://www.g2rain.com/platform/contact.html)。
+接入交流可通过[微信联系维护者](docs/images/contact/wechat.jpg)，也欢迎在 [GitHub Discussions](https://github.com/g2rain/g2rain/discussions) 留言。
 
 智能体平台与智能客服核心模块均已发布并开源，欢迎了解源码、部署接入并参与建设。
 
@@ -36,12 +36,14 @@ G2rain（谷雨）面向希望将 AI 接入实际业务的开发者与企业团�
 
 ## 现在可以从哪里开始
 
+准备部署或二次开发时，先读[平台系统架构](docs/architecture/platform-system.md)理解服务边界，再按[场景选择组件与验证顺序](docs/getting-started.md#按场景选择组件)，进入对应项目的版本文档。主仓库提供项目关系和入口；各责任项目维护实际配置、构建和运行步骤。
+
 | 你的目标 | 建议路径 | 当前状态 |
 | --- | --- | --- |
 | 先看看知识对话和平台界面 | [在线演示](#在线演示) → [界面展示](docs/showcase.md) | 演示可体验 |
 | 生成生产部署方案、部署知识库或搭建业务应用环境 | [开发与部署入口](docs/getting-started.md) → [g2rain-bootstrap](https://github.com/g2rain/g2rain-bootstrap) · [g2rain-deploy](https://github.com/g2rain/g2rain-deploy) | Bootstrap 用于快速启动和生产部署；Deploy 用于开发联调 |
 | 开发自己的前后端应用 | [前端工具链](docs/releases/ecosystem-v2026.10.29.md) · [后端工具链](docs/releases/backend-ecosystem-v2026.10.30.md) | 组件、模板与工具已有版本发布 |
-| 接入智能体或智能客服 | [能力与路线图](docs/roadmap.md) → [联系维护者](https://www.g2rain.com/platform/contact.html) | 智能体平台与智能客服均已开源 |
+| 接入智能体或智能客服 | [能力与路线图](docs/roadmap.md) → [微信联系维护者](docs/images/contact/wechat.jpg) · [GitHub Discussions](https://github.com/g2rain/g2rain/discussions) | 智能体平台与智能客服均已开源 |
 
 平台采用 **Java 微服务 + Vue 3 微前端**。企业权限、知识运营和研发工具共同支撑应用接入；交易支付、商业订阅和计量计费见[商业化规划](docs/roadmap.md#六商业化)。
 

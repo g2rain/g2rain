@@ -52,7 +52,7 @@
 - [知识对话演示](https://demo.g2rain.com/chat/?entry=ek_xV3IEOTK8HfexoR3PupYcF)：无需登录。
 - [主应用演示](https://demo.g2rain.com/main/)：用户名和密码均为 `admin`，用于该演示入口。
 - [开发与部署](getting-started.md)：按目标选择仓库和版本。
-- [官方网站](https://www.g2rain.com) · [联系维护者](https://www.g2rain.com/platform/contact.html)。
+- [官方网站](https://www.g2rain.com) · [微信联系维护者](images/contact/wechat.jpg) · [GitHub Discussions](https://github.com/g2rain/g2rain/discussions)。
 - [Star 主仓库](https://github.com/g2rain/g2rain)：收藏平台入口；[关注组织](https://github.com/g2rain)了解动态。
 - [Issues](https://github.com/g2rain/g2rain/issues)反馈问题；[Discussions](https://github.com/g2rain/g2rain/discussions)分享需求与实践。
 
